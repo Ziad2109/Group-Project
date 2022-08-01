@@ -2,7 +2,7 @@ package application;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.*;
 
 public class StreamingServiceRandomizer {
 
@@ -14,7 +14,10 @@ public class StreamingServiceRandomizer {
 
     @FXML
     private ChoiceBox<?> maturityRatingChoiceBox;
-
+    
+    @FXML
+    private Label threeRandomizedSuggestionsLabel;
+    
     @FXML
     private ChoiceBox<?> streamingServiceChoiceBox;
 
@@ -23,6 +26,7 @@ public class StreamingServiceRandomizer {
 
     @FXML
     void calculateOptions(ActionEvent event) {
+    	
     	Object yearReleased = yearReleasedChoiceBox.getValue();
     	System.out.println("Year of release: "+ yearReleased);
     	
@@ -38,7 +42,10 @@ public class StreamingServiceRandomizer {
     	Object genre = genreChoiceBox.getValue();
     	System.out.println("Genre selected: "+ genre);
     	
-    	//System.out.println("Button was pressed");
+    	//treeRandomizedChoices = String[] myStringArray = {"a", "b", "c"};
+    	//System.out.println("Your three choices are: CSI Miami, NCIS, House" );
+    	// Display result in the window
+    	threeRandomizedSuggestionsLabel.setText(String.format("Your three choices are: CSI Miami, NCIS, House"));
     	
 
     }
