@@ -63,32 +63,32 @@ public class StreamDirectory {
 	} 
 
 	private static Stream createStream(String[] metadata) { 
-		String name = metadata[0]; 
+		String title = metadata[0]; 
 		int price = Integer.parseInt(metadata[1]); 
 		String author = metadata[2]; 
 		
 		// create and return book of this metadata
-		return new Stream(name, price, author); 
+		return new Stream(title, price, author); 
 	}
 }
 
 class Stream { 
-	private String name; 
+	private String title; 
 	private int price; 
 	private String author; 
 
-	public Stream(String name, int price, String author) { 
-		this.name = name; 
+	public Stream(String title, int price, String author) { 
+		this.title = title; 
 		this.price = price; 
 		this.author = author; 
 	} 
 
 	public String getName() { 
-		return name; 
+		return title; 
 	} 
 
-	public void setName(String name) {
-		this.name = name;
+	public void setName(String title) {
+		this.title = title;
 	}
 
 	public int getPrice() {
@@ -109,7 +109,7 @@ class Stream {
 
 	@Override 
 	public String toString() {
-		return "Book [name=" + name + ", price=" + price + ", author=" + author + "]"; 
+		return "Book [title=" + title + ", price=" + price + ", author=" + author + "]"; 
 
 	} 
 
