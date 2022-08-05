@@ -1,8 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.collections.FXCollections?>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<VBox prefHeight="220.0" prefWidth="581.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StreamingServiceRandomizer">
+   <children>
+      <HBox prefHeight="169.0" prefWidth="413.0">
+         <children>
+            <VBox prefHeight="169.0" prefWidth="118.0">
+               <children>
+                  <Label text="Streaming Service">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin></Label>
+                  <ChoiceBox fx:id="streamingServiceChoiceBox" prefWidth="150.0">
+                 	 <items>
+                 		<FXCollections fx:factory="observableArrayList">
+                 			<String fx:value="Netflix" />
+                 			<String fx:value="Hulu" />
+                 			<String fx:value="Prime Video" />
+                 			<String fx:value="Disney+" />
+                 		</FXCollections>
+                 	 </items>
+                  </ChoiceBox>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="View Type">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="22.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="viewTypeChoiceBox" prefWidth="150.0">
+	                  <items>
+	                 		<FXCollections fx:factory="observableArrayList">
+	                 			<String fx:value="Movie" />
+	                 			<String fx:value="TV Show" />
+	                 		</FXCollections>
+	                   </items>
+                  </ChoiceBox>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Genre">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="33.0" right="10.0" top="10.0" />
+                     </VBox.margin></Label>
+                  <ChoiceBox fx:id="genreChoiceBox" prefWidth="150.0">
+                  	   <items>
+	                 		<FXCollections fx:factory="observableArrayList">
+	                 			<String fx:value="Action and Adventure" />
+								<String fx:value="Adult" />
+								<String fx:value="Animated" />
+								<String fx:value="Arts" />
+								<String fx:value="Biographical" />
+								<String fx:value="Black Stories" />
+								<String fx:value="British" />
+								<String fx:value="Cartoons" />
+								<String fx:value="Classic" />
+								<String fx:value="Comedy" />
+								<String fx:value="Coming of Age" />
+								<String fx:value="Cooking" />
+								<String fx:value="Crime" />
+								<String fx:value="Documentary" />
+								<String fx:value="Drama" />
+								<String fx:value="Family" />
+								<String fx:value="Fantasy" />
+								<String fx:value="History" />
+								<String fx:value="Horror" />
+								<String fx:value="Independent" />
+								<String fx:value="Kids" />
+								<String fx:value="Latino" />
+								<String fx:value="LGBTQ" />
+								<String fx:value="Lifestyle" />
+								<String fx:value="Military and War" />
+								<String fx:value="Nature" />
+								<String fx:value="Reality" />
+								<String fx:value="Romance" />
+								<String fx:value="Sci-Fi and Fantasy" />
+								<String fx:value="Sports" />
+	                 		</FXCollections>
+	                   </items>
+                  </ChoiceBox>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="169.0" prefWidth="109.0">
+               <children>
+                  <Label text="Maturity Rating">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="13.0" right="10.0" top="10.0" />
+                     </VBox.margin></Label>
+                  <ChoiceBox fx:id="maturityRatingChoiceBox" prefWidth="150.0">
+                  	   <items>
+	                 		<FXCollections fx:factory="observableArrayList">
+	                 			<String fx:value="TV-Y7" />
+								<String fx:value="G" />
+								<String fx:value="PG" />
+								<String fx:value="PG-13" />
+								<String fx:value="TV-14" />
+								<String fx:value="16+" />
+								<String fx:value="Mature" />
+								<String fx:value="18+" />
+								<String fx:value="R" />
+								<String fx:value="UNRATED" />
+	                 		</FXCollections>
+	                   </items>
+                  </ChoiceBox>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Year Released">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="13.0" right="10.0" top="10.0" />
+                     </VBox.margin></Label>
+                  <ChoiceBox fx:id="yearReleasedChoiceBox" prefWidth="150.0">
+                  	   <items>
+	                 		<FXCollections fx:factory="observableArrayList">
+	                 			<String fx:value="pre-1980" />
+	                 			<String fx:value="1980-2000" />
+	                 			<String fx:value="2000-2010" />
+	                 			<String fx:value="post-2010" />
+	                 		</FXCollections>
+	                   </items>
+                  </ChoiceBox>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#calculateOptions" prefHeight="39.0" prefWidth="260.0" text="Calculate Options">
+         <VBox.margin>
+            <Insets bottom="10.0" left="155.0" right="10.0" />
+         </VBox.margin></Button>
+      <Label fx:id="threeRandomizedSuggestionsLabel" prefHeight="17.0" prefWidth="393.0">
+         <VBox.margin>
+            <Insets bottom="10.0" left="85.0" right="10.0" />
+         </VBox.margin>
+      </Label>
+   </children>
 </VBox>
-
