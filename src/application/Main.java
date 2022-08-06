@@ -16,8 +16,10 @@ public class Main extends Application {
 			FXMLLoader loader = new FXMLLoader();
 			VBox root = loader.load(new FileInputStream("src/application/StreamSearch.fxml"));
 			Scene scene = new Scene(root,400,400);
+			VBox root = loader.load(new FileInputStream("src/application/StreamingServiceRandomizerView.fxml"));
+			Scene scene = new Scene(root,581,220);
 			primaryStage.setScene(scene);
-			primaryStage.setTitle("Group Project");
+			primaryStage.setTitle("Streaming Service Randomizer");
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
