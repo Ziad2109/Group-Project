@@ -22,21 +22,19 @@ public class Directory {
 		List<RetrieveData> streaming = new ArrayList<>();
 			
 		String path = "src/application/Directory.csv";
-		String line = "";
+		
 		
 		try {
 			try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
-				while((line = reader.readLine()) != null) {
+				String line = reader.readLine();
+				
+				for (int i = 0; i < 400; i++){
 					
 					String[] details = line.split(",");
-					
 					RetrieveData movie = createMetadata(details);
-					
 					streaming.add(movie);
 					
-					System.out.println(line);
-					
-					break;
+					line = reader.readLine();
 				}
 			}
 			
@@ -55,9 +53,10 @@ public class Directory {
 		 String title = data [2];
 		 String year = data [3];
 		 String rating = data [4];
-		 String service = data [5];
+		 String genre = data [5];
+		 String service = data [6];
 		
-		return new RetrieveData(ID, type, title, year, rating, service);
+		return new RetrieveData(ID, type, title, year, rating, genre, service);
 	}
 }
 
@@ -70,6 +69,7 @@ class RetrieveData {
 	private String title;
 	private String year;
 	private String rating;
+	private String genre;
 	private String service;
 
 	public RetrieveData(String ID, 
@@ -77,12 +77,14 @@ class RetrieveData {
 				String title, 
 				String year, 
 				String rating,
+				String genre,
 				String service) {
 		this.setID(ID);
 		this.setType(type);
 		this.setTitle(title);
 		this.setYear(year);
 		this.setRating(rating);
+		this.setGenre(genre);
 		this.setService(service);
 		
 		
@@ -128,6 +130,14 @@ class RetrieveData {
 	public void setRating(String rating) {
 		this.rating = rating;
 	}
+	
+	public String getGenre() {
+		return genre;
+	}
+
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
 
 	public String getService() {
 		return service;
@@ -139,7 +149,7 @@ class RetrieveData {
 	
 	@Override 
 	public String toString() {
-		return "Book ["+ ID + type + title + year + rating + service +"]"; 
+		return "["+ ID + " ," + type + " ," + title + " ," + year + " ," + rating + " ," + genre + " ," + service +"]"; 
 
 	}
 }
