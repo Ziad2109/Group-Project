@@ -19,7 +19,7 @@ import java.util.List;
 public class StreamDirectory { 
 
 	public static void main(String[] args) { 
-		List<Stream> streaming = readstreamingFromCSV("streaming.txt"); 
+		List<Stream> streaming = readstreamingFromCSV("ProjectFileSetUp copy.txt"); 
 
 		// let's print all the person read from CSV file 
 		for (Stream b : streaming) { 
