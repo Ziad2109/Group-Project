@@ -17,18 +17,14 @@ import java.util.List;
 */ 
 
 public class StreamDirectory { 
-
+	
 	public static void main(String[] args) { 
-		List<Stream> streaming = readstreamingFromCSV("Directory.csv"); 
-
-		// let's print all the person read from CSV file 
-		for (Stream b : streaming) { 
-			System.out.println(b); 
-		} 
+		List<Stream> streaming = readstreamingFromCSV("Directory.csv");
+		// let's print all the person read from CSV file
 	}
 
 
-	private static List<Stream> readstreamingFromCSV(String fileName) { 
+	public static List<Stream> readstreamingFromCSV(String fileName) { 
 		List<Stream> streaming = new ArrayList<>(); 
 		Path pathToFile = Paths.get(fileName); 
 
@@ -50,11 +46,11 @@ public class StreamDirectory {
 				Stream book = createStream(attributes); 
 
 				// adding book into ArrayList 
-				streaming.add(book); 
+				streaming.add(book);
 
 				// read next line before looping 
 				// if end of file reached, line would be null 
-				line = br.readLine(); 
+				line = br.readLine();
 			} 
 		} catch (IOException ioe) { 
 			ioe.printStackTrace(); 
@@ -83,23 +79,28 @@ class Stream {
 	private String category;
 	private String streamingService;
 
-	public Stream(String type, String year, String rating, String category, String streamingService) { 
-		this.type = type; 
-		//this.title = title; 
+	public Stream(String type, String year, String rating, String category, String streamingService) {
+		
+		
+		for (Stream b : StreamDirectory.readstreamingFromCSV("Directory.csv")) { 
+			System.out.println(b);
+		} 
+		
+		this.type = type;
 		this.year = year;
-		this.rating = rating; 
-		this.category = category; 
-		this.streamingService = streamingService; 
+		this.rating = rating;
+		this.category = category;
+		this.streamingService = streamingService;
 
-	} 
+	}
 
-//	public String getName() { 
-//		return title; 
-//	} 
+	public String getName() { 
+		return title;
+	}
 
-//	public void setName(String title) {
-//		this.title = title;
-//	}
+	public void setName(String title) {
+		this.title = title;
+	}
 
 	public String getType() {
 		return type;

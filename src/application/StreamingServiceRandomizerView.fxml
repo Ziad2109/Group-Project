@@ -136,7 +136,7 @@
                   <ChoiceBox fx:id="yearReleasedChoiceBox" prefWidth="150.0">
                   	   <items>
 	                 		<FXCollections fx:factory="observableArrayList">
-	                 			<String fx:value="pre-1980" />
+	                 			<String fx:value="pre-1980"/>
 	                 			<String fx:value="1980-2000" />
 	                 			<String fx:value="2000-2010" />
 	                 			<String fx:value="post-2010" />
