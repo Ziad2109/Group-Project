@@ -10,7 +10,7 @@ public class Directory {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		String path = "src\\Untitled 1";
+		String path = "src/application/Directory.csv";
 		String line = "";
 		
 		try {
