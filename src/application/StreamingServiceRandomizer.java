@@ -42,8 +42,9 @@ public class StreamingServiceRandomizer {
     	Object genre = genreChoiceBox.getValue();
     	System.out.println("Genre selected: "+ genre);
     	
-    	Stream value = new Stream(String.valueOf(viewType), String.valueOf(yearReleased),String.valueOf(maturityRating), String.valueOf(genre), String.valueOf(streamingService));
-    	System.out.println("Result: "+ value);
+    	StreamDirectory value = new StreamDirectory();
+    	//value =  Stream(String.valueOf(viewType), String.valueOf(yearReleased),String.valueOf(maturityRating), String.valueOf(genre), String.valueOf(streamingService));
+    	System.out.println("Result: "+ value.FromDirectory("src/application/Directory.csv"));
     	//treeRandomizedChoices = String[] myStringArray = {"a", "b", "c"};
     	//System.out.println("Your three choices are: CSI Miami, NCIS, House" );
     	// Display result in the window
