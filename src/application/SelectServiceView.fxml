@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.collections.FXCollections?>
+
+<VBox alignment="TOP_CENTER" prefHeight="270.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StreamingServiceRandomizer">
+   <children>
+      <AnchorPane prefHeight="72.0" prefWidth="581.0">
+         <children>
+            <Label layoutX="116.0" layoutY="19.0" text="Select Your Streaming Services">
+               <font>
+                  <Font name="Avenir Heavy Oblique" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <HBox prefHeight="128.0" prefWidth="581.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../University%20/Project%20set%20up/Streaming%20Service%20Logos/netflix-icon.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <CheckBox fx:id="netflixCheckBox" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Netflix" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </CheckBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../University%20/Project%20set%20up/Streaming%20Service%20Logos/disney-icon.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <CheckBox fx:id="disneyCheckBox" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Disney+" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </CheckBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../University%20/Project%20set%20up/Streaming%20Service%20Logos/prime-icon.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <CheckBox fx:id="primeCheckBox" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Prime Video" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </CheckBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../University%20/Project%20set%20up/Streaming%20Service%20Logos/hulu-icon.jpeg" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <CheckBox fx:id="huluCheckBox" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Hulu" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </CheckBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#serviceSelected" prefHeight="27.0" prefWidth="93.0" text="Done!">
+         <VBox.margin>
+            <Insets bottom="20.0" top="20.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>
