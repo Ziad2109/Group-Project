@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.collections.FXCollections?>
 
-<VBox alignment="TOP_CENTER" prefHeight="270.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StreamingServiceRandomizer">
+<VBox alignment="TOP_CENTER" prefHeight="270.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SelectServiceController">
    <children>
       <AnchorPane prefHeight="72.0" prefWidth="581.0">
          <children>
@@ -21,7 +21,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <HBox prefHeight="128.0" prefWidth="581.0">
+      <HBox alignment="CENTER" prefHeight="128.0" prefWidth="581.0">
          <children>
             <VBox alignment="CENTER" prefHeight="200.0">
                <padding>
