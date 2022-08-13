@@ -272,7 +272,7 @@
 300663,Movie,Lou,2017,G,Action & Adventure,Disney+
 300666,Movie,Luck of the Irish,2001,G,Comedy,Disney+
 300667,Movie,Luxo Jr.,1986,G,Animated,Disney+
-300669,Movie,Maggie Simpson in "Playdate with Destiny",2020,G,Animated,Disney+
+300669,Movie,"Maggie Simpson in ""Playdate with Destiny""",2020,G,Animated,Disney+
 300675,Movie,Mail Dog,1947,G,Animated,Disney+
 300683,Movie,Mars and Beyond,1957,G,Animated,Disney+
 300742,Movie,Mary Poppins,1964,G,Family,Disney+
@@ -814,8 +814,8 @@
 300664,TV Show,Love & Vets,2017,PG,Nature,Disney+
 300665,Movie,Luca,2021,PG,Animated,Disney+
 300668,TV Show,Made in a Day,2020,PG,Reality,Disney+
-300670,Movie,Maggie Simpson in "The Force Awakens from its Nap",2021,PG,Animated,Disney+
-300671,Movie,Maggie Simpson in "The Longest Daycare",2012,PG,Animated,Disney+
+300670,Movie,"Maggie Simpson in ""The Force Awakens from its Nap""",2021,PG,Animated,Disney+
+300671,Movie,"Maggie Simpson in ""The Longest Daycare""",2012,PG,Animated,Disney+
 300672,Movie,Magic Camp,2020,PG,Comedy,Disney+
 300673,TV Show,Magic of Disney's Animal Kingdom,2020,PG,Nature,Disney+
 300674,Movie,Magician Mickey,1937,PG,Animated,Disney+
@@ -1126,26 +1126,26 @@
 300574,Movie,Jack,1996,PG-13,Comedy,Disney+
 300585,Movie,John Carter,2012,PG-13,Action & Adventure,Disney+
 300596,Movie,Jungle Cruise,2021,PG-13,Action & Adventure,Disney+
-300703,Movie,Ant-Man,2015,PG-13,Action & Adventure,Disney+
-300704,Movie,Ant-Man and the Wasp,2018,PG-13,Action & Adventure,Disney+
-300705,Movie,Avengers: Age of Ultron,2015,PG-13,Action & Adventure,Disney+
-300706,Movie,Avengers: Endgame,2019,PG-13,Action & Adventure,Disney+
-300707,Movie,Avengers: Infinity War,2018,PG-13,Action & Adventure,Disney+
-300708,Movie,Black Panther,2018,PG-13,Action & Adventure,Disney+
-300709,Movie,Captain America: Civil War,2016,PG-13,Action & Adventure,Disney+
-300710,Movie,Captain America: The First Avenger,2011,PG-13,Action & Adventure,Disney+
-300711,Movie,Captain America: The Winter Soldier,2014,PG-13,Action & Adventure,Disney+
-300712,Movie,Captain Marvel,2019,PG-13,Action & Adventure,Disney+
-300713,Movie,Doctor Strange,2016,PG-13,Action & Adventure,Disney+
-300714,Movie,Guardians of the Galaxy,2014,PG-13,Action & Adventure,Disney+
-300715,Movie,Guardians of the Galaxy Vol. 2,2017,PG-13,Action & Adventure,Disney+
-300716,Movie,Iron Man,2008,PG-13,Action & Adventure,Disney+
-300717,Movie,Iron Man 2,2010,PG-13,Action & Adventure,Disney+
-300718,Movie,Iron Man 3,2013,PG-13,Action & Adventure,Disney+
-300719,Movie,The Avengers,2012,PG-13,Action & Adventure,Disney+
-300720,Movie,Thor,2011,PG-13,Action & Adventure,Disney+
-300721,Movie,Thor: Ragnarok,2017,PG-13,Action & Adventure,Disney+
-300722,Movie,Thor: The Dark World,2013,PG-13,Action & Adventure,Disney+
+300703,Movie,Marvel Studios' Ant-Man,2015,PG-13,Action & Adventure,Disney+
+300704,Movie,Marvel Studios' Ant-Man and the Wasp,2018,PG-13,Action & Adventure,Disney+
+300705,Movie,Marvel Studios' Avengers: Age of Ultron,2015,PG-13,Action & Adventure,Disney+
+300706,Movie,Marvel Studios' Avengers: Endgame,2019,PG-13,Action & Adventure,Disney+
+300707,Movie,Marvel Studios' Avengers: Infinity War,2018,PG-13,Action & Adventure,Disney+
+300708,Movie,Marvel Studios' Black Panther,2018,PG-13,Action & Adventure,Disney+
+300709,Movie,Marvel Studios' Captain America: Civil War,2016,PG-13,Action & Adventure,Disney+
+300710,Movie,Marvel Studios' Captain America: The First Avenger,2011,PG-13,Action & Adventure,Disney+
+300711,Movie,Marvel Studios' Captain America: The Winter Soldier,2014,PG-13,Action & Adventure,Disney+
+300712,Movie,Marvel Studios' Captain Marvel,2019,PG-13,Action & Adventure,Disney+
+300713,Movie,Marvel Studios' Doctor Strange,2016,PG-13,Action & Adventure,Disney+
+300714,Movie,Marvel Studios' Guardians of the Galaxy,2014,PG-13,Action & Adventure,Disney+
+300715,Movie,Marvel Studios' Guardians of the Galaxy Vol. 2,2017,PG-13,Action & Adventure,Disney+
+300716,Movie,Marvel Studios' Iron Man,2008,PG-13,Action & Adventure,Disney+
+300717,Movie,Marvel Studios' Iron Man 2,2010,PG-13,Action & Adventure,Disney+
+300718,Movie,Marvel Studios' Iron Man 3,2013,PG-13,Action & Adventure,Disney+
+300719,Movie,Marvel Studios' The Avengers,2012,PG-13,Action & Adventure,Disney+
+300720,Movie,Marvel Studios' Thor,2011,PG-13,Action & Adventure,Disney+
+300721,Movie,Marvel Studios' Thor: Ragnarok,2017,PG-13,Action & Adventure,Disney+
+300722,Movie,Marvel Studios' Thor: The Dark World,2013,PG-13,Action & Adventure,Disney+
 300786,Movie,Miss Peregrine's Home for Peculiar Children,2016,PG-13,Coming of Age,Disney+
 300802,Movie,Mrs. Doubtfire,1993,PG-13,Comedy,Disney+
 300803,Movie,Mulan,2020,PG-13,Action & Adventure,Disney+

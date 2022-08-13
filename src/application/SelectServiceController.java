@@ -14,6 +14,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+//import javafx.scene.layout.AnchorPane;
+//import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class SelectServiceController implements Initializable{
@@ -48,16 +50,16 @@ public class SelectServiceController implements Initializable{
     @Override 
     public void initialize (URL url, ResourceBundle rb) {
     	
-    	Image disneyLogo = new Image (getClass().getResourceAsStream("/images/disney-icon.png"));
+    	Image disneyLogo = new Image (getClass().getResourceAsStream("/resources/disney-icon.png"));
     	disneyImage.setImage(disneyLogo);
     	
-    	Image netflixLogo = new Image (getClass().getResourceAsStream("/images/netflix-icon.png"));
+    	Image netflixLogo = new Image (getClass().getResourceAsStream("/resources/netflix-icon.png"));
     	netflixImage.setImage(netflixLogo);
     	
-    	Image primeLogo = new Image (getClass().getResourceAsStream("/images/prime-icon.png"));
+    	Image primeLogo = new Image (getClass().getResourceAsStream("/resources/prime-icon.png"));
     	primeImage.setImage(primeLogo);
     	
-    	Image huluLogo = new Image (getClass().getResourceAsStream("/images/hulu-icon.png"));
+    	Image huluLogo = new Image (getClass().getResourceAsStream("/resources/hulu-icon.png"));
     	huluImage.setImage(huluLogo);
     }
     
@@ -81,16 +83,24 @@ public class SelectServiceController implements Initializable{
     		&& !huluCheckBox.isSelected()) {
     		;
     	} else {
-    		if (netflixCheckBox.isSelected()) {
+    		if (netflixCheckBox.isSelected()&& !disneyCheckBox.isSelected()
+    	    		&& !primeCheckBox.isSelected()
+    	    		&& !huluCheckBox.isSelected()) {
     			;
     		}
-    		if (disneyCheckBox.isSelected()) {
+    		else if (disneyCheckBox.isSelected()&& !netflixCheckBox.isSelected()
+    	    		&& !primeCheckBox.isSelected()
+    	    		&& !huluCheckBox.isSelected()) {
     			;
     		}
-    		if (primeCheckBox.isSelected()) {
+    		else if (primeCheckBox.isSelected()&& !disneyCheckBox.isSelected()
+    	    		&& !netflixCheckBox.isSelected()
+    	    		&& !huluCheckBox.isSelected()) {
     			;
     		}
-    		if (huluCheckBox.isSelected()) {
+    		else if (huluCheckBox.isSelected()&& !disneyCheckBox.isSelected()
+    	    		&& !primeCheckBox.isSelected()
+    	    		&& !netflixCheckBox.isSelected()) {
     			;
     		}
     		
@@ -100,7 +110,7 @@ public class SelectServiceController implements Initializable{
     		 * 
     		 * @throws IOException -- 
     		 */
-    		Parent root = FXMLLoader.load(getClass().getResource("/application/fxmlFiles/SpecificationsView.fxml"));
+    		Parent root = FXMLLoader.load(getClass().getResource("/fxmlFiles/SpecificationsView.fxml"));
         	stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         	scene = new Scene (root);
         	stage.setScene(scene);

@@ -13,7 +13,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			
-			Parent root = FXMLLoader.load(getClass().getResource("/application/fxmlFiles/SelectServiceView.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("/fxmlFiles/SelectServiceView.fxml"));
 
 			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);

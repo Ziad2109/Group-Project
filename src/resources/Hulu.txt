@@ -49,11 +49,11 @@
 400062,TV Show,9/11 20 Years Later: Women of Resilience,2021,PG,Military and War,Hulu
 400063,Movie,9/11 Twenty Years Later: The Longest Shadow,2021,PG,Military and War,Hulu
 400064,TV Show,9/11: One Day in America,2021,Mature,Documentary,Hulu
-400065,TV Show,90 Day Fiance,2014,TV-14,Documentary,Hulu
-400066,TV Show,90 Day Fiance: Before the 90 Days,2017,TV-14,Documentary,Hulu
-400067,TV Show,90 Day Fiance: Happily Ever After?,2016,TV-14,Documentary,Hulu
-400068,Movie,90 Day Fiance: Self-Quarantined,2020,PG,Documentary,Hulu
-400069,TV Show,90 Day Fiance: The Other Way,2019,TV-14,Reality,Hulu
+400065,TV Show,90 Day Fianc√©,2014,TV-14,Documentary,Hulu
+400066,TV Show,90 Day Fianc√©: Before the 90 Days,2017,TV-14,Documentary,Hulu
+400067,TV Show,90 Day Fianc√©: Happily Ever After?,2016,TV-14,Documentary,Hulu
+400068,Movie,90 Day Fianc√©: Self-Quarantined,2020,PG,Documentary,Hulu
+400069,TV Show,90 Day Fianc√©: The Other Way,2019,TV-14,Reality,Hulu
 400070,Movie,A 2nd Chance,2014,PG,Drama,Hulu
 400071,Movie,A Beautiful Day in the Neighborhood,2019,PG,Drama,Hulu
 400072,Movie,A Beautiful Planet,2016,G,Documentary,Hulu

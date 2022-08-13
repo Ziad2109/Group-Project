@@ -2,7 +2,7 @@ package application;
 
 public class RetrieveData {
 	
-		private String ID;
+		private int ID;
 		private String type;
 		private String title;
 		private String year;
@@ -10,13 +10,14 @@ public class RetrieveData {
 		private String genre;
 		private String service;
 
-		public RetrieveData(String ID, 
+		public RetrieveData(int ID, 
 					String type, 
 					String title, 
 					String year, 
 					String rating,
 					String genre,
 					String service) {
+			
 			this.setID(ID);
 			this.setType(type);
 			this.setTitle(title);
@@ -28,13 +29,18 @@ public class RetrieveData {
 			
 			
 			}
+		
+		/**
+		 * getters and setters of arguments
+		 * 
+		 */
 
-		public String getID() {
+		public int getID() {
 			return ID;
 		}
 
-		public void setID(String iD) {
-			ID = iD;
+		public void setID(int ID) {
+			this.ID = ID;
 		}
 
 		public String getType() {

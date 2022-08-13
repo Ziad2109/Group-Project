@@ -7,7 +7,7 @@
 204796,Movie,M.F.A.,2017,18+,Drama,Amazon Prime
 206091,Movie,Plug Love,2017,18+,Drama,Amazon Prime
 207830,Movie,The Dead Center,2019,18+,Horror,Amazon Prime
-200012,TV Show,The Paramedic Angel,2021,G,Drama,Amazon Prime
+200012,TV Show,"""The Paramedic Angel""",2021,G,Drama,Amazon Prime
 200018,TV Show,#Lagira de #eldisco,2019,G,Military and War,Amazon Prime
 200029,Movie,10 Little Buses & More Counting Songs For Kids - KiiYii,2020,G,Kids,Amazon Prime
 200030,Movie,10 Minute Meditation for Sleep,2020,G,Drama,Amazon Prime
@@ -1512,7 +1512,7 @@
 200007,Movie,27-Sep,2021,PG,Drama,Amazon Prime
 200008,Movie,54321,2016,PG,Drama,Amazon Prime
 200010,TV Show,'Allo 'Allo!,1992,PG,Comedy,Amazon Prime
-200011,Movie,Mixed Up,2020,PG,Drama,Amazon Prime
+200011,Movie,"""Mixed Up""",2020,PG,Drama,Amazon Prime
 200014,Movie,#Home,2021,PG,Drama,Amazon Prime
 200015,Movie,#Home (4K UHD),2021,PG,Drama,Amazon Prime
 200016,TV Show,#IGotThis,2020,PG,Drama,Amazon Prime
@@ -2077,7 +2077,7 @@
 201000,Movie,Bangalore Naatkal,2016,PG,Comedy,Amazon Prime
 201002,Movie,Bannerghatta,2021,PG,Horror,Amazon Prime
 201003,Movie,Banshiwala,2010,PG,Drama,Amazon Prime
-201004,Movie,Barbara Stanwyck & Sterling Hayden in "Crime of Passion" - A Film Noir Classic,1956,PG,Action & Adventure,Amazon Prime
+201004,Movie,"Barbara Stanwyck & Sterling Hayden in ""Crime of Passion"" - A Film Noir Classic",1956,PG,Action & Adventure,Amazon Prime
 201005,Movie,Barbed Wire,1952,PG,Horror,Amazon Prime
 201012,Movie,Barista,2015,PG,Documentary,Amazon Prime
 201015,Movie,Barrabas,1962,PG,Drama,Amazon Prime
@@ -2559,8 +2559,8 @@
 201783,Movie,Circle,2020,PG,Action & Adventure,Amazon Prime
 201784,Movie,CIRCLES vol 1,2021,PG,Romance,Amazon Prime
 201785,Movie,Circumstances 2,2020,PG,Action & Adventure,Amazon Prime
-201787,Movie,Cisco Kid in - "Phoney Sheriff" & "Lynching Story",1950,PG,Action & Adventure,Amazon Prime
-201788,Movie,Cisco Kid in - "Wedding Blackmail" & "False Marriage",1950,PG,Action & Adventure,Amazon Prime
+201787,Movie,"Cisco Kid in - ""Phoney Sheriff"" & ""Lynching Story""",1950,PG,Action & Adventure,Amazon Prime
+201788,Movie,"Cisco Kid in - ""Wedding Blackmail"" & ""False Marriage""",1950,PG,Action & Adventure,Amazon Prime
 201789,TV Show,Cities of the Underworld,2008,PG,Documentary,Amazon Prime
 201790,Movie,Citizen K,2020,PG,Documentary,Amazon Prime
 201791,Movie,Citizens of the World,2020,PG,Comedy,Amazon Prime
@@ -2744,7 +2744,7 @@
 202087,Movie,D-Day: The Price of Freedom,2007,PG,Documentary,Amazon Prime
 202088,Movie,D.L. Hughley: Clear,2014,PG,Arts,Amazon Prime
 202089,Movie,D.L. Hughley: Reset,2012,PG,Arts,Amazon Prime
-202091,Movie,D.W. Griffith's "Abraham Lincoln" - The Walter Huston 1930 Classic,1930,PG,Action & Adventure,Amazon Prime
+202091,Movie,"D.W. Griffith's ""Abraham Lincoln"" - The Walter Huston 1930 Classic",1930,PG,Action & Adventure,Amazon Prime
 202094,Movie,Daag,1973,PG,Drama,Amazon Prime
 202095,Movie,Dabangg 3,2019,PG,Action & Adventure,Amazon Prime
 202096,Movie,Dabangg 3 (Tamil),2019,PG,Action & Adventure,Amazon Prime
@@ -2897,7 +2897,7 @@
 202325,Movie,Diana: The Royal Truth,2017,PG,Documentary,Amazon Prime
 202326,Movie,Diani & Devine Meet the Apocalypse,2016,PG,Comedy,Amazon Prime
 202327,Movie,DIARY OF A CHAMBERMAID,1964,PG,Independent,Amazon Prime
-202328,Movie,Dick Winters: "Hang Tough",2013,PG,Documentary,Amazon Prime
+202328,Movie,"Dick Winters: ""Hang Tough""",2013,PG,Documentary,Amazon Prime
 202329,TV Show,Dickensian,2016,PG,Drama,Amazon Prime
 202338,TV Show,Diff'rent Strokes,1986,PG,Comedy,Amazon Prime
 202339,Movie,Different,2021,PG,Action & Adventure,Amazon Prime
@@ -3018,7 +3018,7 @@
 202527,Movie,Eagle and the Hawk,1950,PG,Horror,Amazon Prime
 202530,Movie,Eagles Attack at Dawn,1970,PG,Action & Adventure,Amazon Prime
 202531,Movie,Ear Buds: The Podcasting Documentary,2016,PG,Comedy,Amazon Prime
-202533,Movie,Eartha Kitt & Sammy Davis Jr. in "Anna Lucasta" - All Black Cast Classic!,1958,PG,Action & Adventure,Amazon Prime
+202533,Movie,"Eartha Kitt & Sammy Davis Jr. in ""Anna Lucasta"" - All Black Cast Classic!",1958,PG,Action & Adventure,Amazon Prime
 202534,Movie,East Side Sushi,2015,PG,Comedy,Amazon Prime
 202535,Movie,Easy Come  Easy Go,1967,PG,Action & Adventure,Amazon Prime
 202536,TV Show,Eat the World with Emeril Lagasse,2016,PG,Documentary,Amazon Prime
@@ -3029,7 +3029,7 @@
 202542,TV Show,Ed Gamble Blood Sugar (4K UHD),2019,PG,Horror,Amazon Prime
 202543,TV Show,Ed Gamble: Blood Sugar,2019,PG,Arts,Amazon Prime
 202545,Movie,Ed Hill: Candy and Smiley,2021,PG,Arts,Amazon Prime
-202546,Movie,Ed Wood's "The Violent Years" - An Exploitation Schlock Classic,1956,PG,Comedy,Amazon Prime
+202546,Movie,"Ed Wood's ""The Violent Years"" - An Exploitation Schlock Classic",1956,PG,Comedy,Amazon Prime
 202547,Movie,Eddie Griffin: Undeniable,2018,PG,Arts,Amazon Prime
 202548,Movie,Eddie Griffin: You Can Tell 'Em I Said It,2011,PG,Comedy,Amazon Prime
 202549,Movie,Eddie Izzard: Circle,2002,PG,Arts,Amazon Prime
@@ -3041,7 +3041,7 @@
 202555,Movie,Eddie Izzard: Unrepeatable,1994,PG,Arts,Amazon Prime
 202556,Movie,Eddie Pence: The (Un)special Comedy Special,2020,PG,Arts,Amazon Prime
 202557,Movie,Eddie Pepitone: In Ruins,2014,PG,Arts,Amazon Prime
-202559,Movie,Edgar Allan Poe's "The Oval Portrait",2021,PG,Horror,Amazon Prime
+202559,Movie,"Edgar Allan Poe's ""The Oval Portrait""",2021,PG,Horror,Amazon Prime
 202560,Movie,Edgar Allan Poe's Requiem for the Damned,2012,PG,Horror,Amazon Prime
 202561,Movie,Edge Of Dawn,2016,PG,Action & Adventure,Amazon Prime
 202562,Movie,Edge of Doom,1950,PG,Drama,Amazon Prime
@@ -3435,7 +3435,7 @@
 203113,Movie,Garden Store Part 2: Deserter,2017,PG,Drama,Amazon Prime
 203116,Movie,Garnet's Gold,2019,PG,Documentary,Amazon Prime
 203117,TV Show,Garth Marenghi's Darkplace,2004,PG,Comedy,Amazon Prime
-203118,Movie,Gary Cooper in "Return To Paradise" - The South Pacific Adventure Classic!,1953,PG,Action & Adventure,Amazon Prime
+203118,Movie,"Gary Cooper in ""Return To Paradise"" - The South Pacific Adventure Classic!",1953,PG,Action & Adventure,Amazon Prime
 203119,Movie,Gary Gulman: Boyish Man,2005,PG,Arts,Amazon Prime
 203120,Movie,Gary Gulman: In This Economy?,2012,PG,Arts,Amazon Prime
 203121,Movie,Gary Owen: #DoinWhatIDo,2019,PG,Arts,Amazon Prime
@@ -3805,7 +3805,7 @@
 203699,Movie,Hrid Majhare,2014,PG,Drama,Amazon Prime
 203700,Movie,Hud,1963,PG,Drama,Amazon Prime
 203701,Movie,Huella: A Rising Voices Film,2021,PG,Comedy,Amazon Prime
-203702,Movie,Hugh O'Brian in "The Brass Legend" - A Western Action Classic,1956,PG,Action & Adventure,Amazon Prime
+203702,Movie,"Hugh O'Brian in ""The Brass Legend"" - A Western Action Classic",1956,PG,Action & Adventure,Amazon Prime
 203703,Movie,Huk,1956,PG,Action & Adventure,Amazon Prime
 203704,Movie,Hum Aapke Dil Mein Rehte Hain,1999,PG,Comedy,Amazon Prime
 203706,Movie,Human experiments,1979,PG,Horror,Amazon Prime
@@ -4073,7 +4073,7 @@
 204094,TV Show,Jimmy O. Yang: Good Deal,2020,PG,Arts,Amazon Prime
 204096,Movie,Jiro Dreams of Sushi,2011,PG,Documentary,Amazon Prime
 204097,Movie,JJ Barrows: Doodle All Day,2019,PG,Arts,Amazon Prime
-204098,Movie,Joan Collins and Richard Egan in "Esther and the King" - A classical biblical epic!,1960,PG,Action & Adventure,Amazon Prime
+204098,Movie,"Joan Collins and Richard Egan in ""Esther and the King"" - A classical biblical epic!",1960,PG,Action & Adventure,Amazon Prime
 204100,TV Show,Joanna Lumley: Jewel in the Nile,2010,PG,Documentary,Amazon Prime
 204101,Movie,Joe & Joe,1996,PG,Arts,Amazon Prime
 204102,Movie,Joel McHale: Live from Pyongyang,2019,PG,Arts,Amazon Prime
@@ -5325,7 +5325,7 @@
 206175,TV Show,Prime Rewind: Inside The Boys,2020,PG,Comedy,Amazon Prime
 206179,Movie,Prince Among Slaves,2008,PG,Drama,Amazon Prime
 206182,Movie,Princess Of The Red Ficus Tree - Dazang Tukung,2021,PG,Action & Adventure,Amazon Prime
-206185,Movie,Priorities Chapter One "Money Isn't Everything",2021,PG,Drama,Amazon Prime
+206185,Movie,"Priorities Chapter One ""Money Isn't Everything""",2021,PG,Drama,Amazon Prime
 206187,Movie,Prisoner Number A26188: Surviving Auschwitz,2013,PG,Documentary,Amazon Prime
 206188,Movie,Prisoner X,2017,PG,Sci-Fi & Fantasy,Amazon Prime
 206189,Movie,Prisoners of the Sun,2014,PG,Action & Adventure,Amazon Prime
@@ -5517,7 +5517,7 @@
 206470,Movie,RiffTrax Live: Time Chasers,2016,PG,Comedy,Amazon Prime
 206471,Movie,RiffTrax Presents High School Hero,2019,PG,Comedy,Amazon Prime
 206472,Movie,RiffTrax Presents: Devil Girl from Mars,2018,PG,Comedy,Amazon Prime
-206473,Movie,RiffTrax: "MANOS" The Hands of Fate,2013,PG,Comedy,Amazon Prime
+206473,Movie,"RiffTrax: ""MANOS"" The Hands of Fate",2013,PG,Comedy,Amazon Prime
 206474,Movie,RiffTrax: Astro-Zombies,2016,PG,Comedy,Amazon Prime
 206475,Movie,RiffTrax: Beast of the Yellow Night,2014,PG,Comedy,Amazon Prime
 206476,Movie,RiffTrax: Blood Theatre,2019,PG,Comedy,Amazon Prime
@@ -5551,8 +5551,8 @@
 206514,TV Show,Rob Delaney: Jackie,2020,PG,Arts,Amazon Prime
 206515,Movie,Rob Schneider: Soy Sauce and the Holocaust,2013,PG,Arts,Amazon Prime
 206518,Movie,Robert,2015,PG,Horror,Amazon Prime
-206519,Movie,Robert Mitchum & Julie London in "The Wonderful Country" - A Technicolor Western Classic,1959,PG,Action & Adventure,Amazon Prime
-206520,Movie,Robert Mitchum in "Thunder Road" - An Action Epic Loaded With Classic Cars!,1958,PG,Action & Adventure,Amazon Prime
+206519,Movie,"Robert Mitchum & Julie London in ""The Wonderful Country"" - A Technicolor Western Classic",1959,PG,Action & Adventure,Amazon Prime
+206520,Movie,"Robert Mitchum in ""Thunder Road"" - An Action Epic Loaded With Classic Cars!",1958,PG,Action & Adventure,Amazon Prime
 206521,Movie,Robin Hood (Silent),1922,PG,Action & Adventure,Amazon Prime
 206522,Movie,Robinson Crusoe,1954,PG,Action & Adventure,Amazon Prime
 206527,Movie,Roborex,2014,PG,Action & Adventure,Amazon Prime
@@ -5581,7 +5581,7 @@
 206563,TV Show,Room at the Top,2012,PG,Horror,Amazon Prime
 206564,Movie,Roommate (Hindi),2021,PG,Drama,Amazon Prime
 206566,Movie,Root of the Problem,2020,PG,Comedy,Amazon Prime
-206568,Movie,Rory Calhoun in "The Big Caper" - A Bank Heist Film Noir Classic!,1957,PG,Action & Adventure,Amazon Prime
+206568,Movie,"Rory Calhoun in ""The Big Caper"" - A Bank Heist Film Noir Classic!",1957,PG,Action & Adventure,Amazon Prime
 206569,Movie,Rosalie Goes Shopping,1989,PG,Arts,Amazon Prime
 206570,TV Show,Rose and Maloney,2005,PG,Drama,Amazon Prime
 206572,TV Show,Ross Kemp: Middle East,2010,PG,Horror,Amazon Prime
@@ -6179,7 +6179,7 @@
 207477,Movie,Taller Than The Trees,2021,PG,Action & Adventure,Amazon Prime
 207479,Movie,Tambyacha Vishnubala,2011,PG,Drama,Amazon Prime
 207481,Movie,Tammy Pescatelli: Finding The Funny,2013,PG,Arts,Amazon Prime
-207482,Movie,Tammy Pescatelli's "Way After School Special",2020,PG,Arts,Amazon Prime
+207482,Movie,"Tammy Pescatelli's ""Way After School Special""",2020,PG,Arts,Amazon Prime
 207483,Movie,TAN,2021,PG,Arts,Amazon Prime
 207484,TV Show,Tandav,2021,PG,Drama,Amazon Prime
 207486,Movie,Tangerines,2014,PG,Action & Adventure,Amazon Prime
@@ -6242,7 +6242,7 @@
 207578,Movie,Thatrom Thookrom,2020,PG,Action & Adventure,Amazon Prime
 207579,Movie,Thavam,2007,PG,Drama,Amazon Prime
 207582,Movie,The 41-Year-Old Virgin Who Knocked Up Sarah Marshall and Felt Superbad About It,2010,PG,Comedy,Amazon Prime
-207583,Movie,The 5th King- Iran : The Blade Barkley Story,2019,PG,Documentary,Amazon Prime
+207583,Movie,"The 5th King- Iran ""The Blade"" Barkley Story",2019,PG,Documentary,Amazon Prime
 207586,Movie,The A-List,2015,PG,Comedy,Amazon Prime
 207588,Movie,The Absent,2005,PG,Drama,Amazon Prime
 207589,Movie,The Accompanist,2019,PG,Drama,Amazon Prime
