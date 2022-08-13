@@ -1,23 +1,22 @@
 package application;
 	
-import java.io.FileInputStream;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
+//import javafx.scene.layout.VBox;
 
 
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			FXMLLoader loader = new FXMLLoader();
-			VBox root = loader.load(new FileInputStream("src/application/SelectServiceView.fxml"));
-			Scene scene = new Scene(root,400,400);
+			
+			Parent root = FXMLLoader.load(getClass().getResource("/application/fxmlFiles/SelectServiceView.fxml"));
+
+			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);
-			primaryStage.setTitle("Group Project");
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
