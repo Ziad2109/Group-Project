@@ -28,10 +28,7 @@
                   <Insets left="20.0" right="20.0" />
                </padding>
                <children>
-                  <ImageView fitHeight="100.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../University%20/Project%20set%20up/Streaming%20Service%20Logos/netflix-icon.png" />
-                     </image>
+                  <ImageView fx:id="netflixImage" fitHeight="100.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
@@ -48,10 +45,7 @@
                   <Insets left="20.0" right="20.0" />
                </padding>
                <children>
-                  <ImageView fitHeight="100.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../University%20/Project%20set%20up/Streaming%20Service%20Logos/disney-icon.png" />
-                     </image>
+                  <ImageView fx:id="disneyImage" fitHeight="100.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
@@ -68,10 +62,7 @@
                   <Insets left="20.0" right="20.0" />
                </padding>
                <children>
-                  <ImageView fitHeight="100.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../University%20/Project%20set%20up/Streaming%20Service%20Logos/prime-icon.png" />
-                     </image>
+                  <ImageView fx:id="primeImage" fitHeight="100.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
@@ -85,10 +76,7 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0">
                <children>
-                  <ImageView fitHeight="100.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../University%20/Project%20set%20up/Streaming%20Service%20Logos/hulu-icon.jpeg" />
-                     </image>
+                  <ImageView fx:id="huluImage" fitHeight="100.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
