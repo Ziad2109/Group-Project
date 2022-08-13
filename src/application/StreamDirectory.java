@@ -18,22 +18,35 @@ import java.util.List;
 * 
 */ 
 
-public class StreamDirectory { 
+public class StreamDirectory{ 
 	
-	public List<Stream> FromDirectory(String fileName) {
+	public List<Stream> FromDirectory(String fileName, String type, String year, String rating, String genre) {
 		List<Stream> streaming = new ArrayList<>();
 		
 		
 		try {
 			try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
 				String line = reader.readLine();
-				
-				for (int i = 0; i < 30; i++){
+				int count = 0;
+				//loop through csv file to read movies and shows
+				while(line!=null){
 					
 					String[] details = line.split(",");
-					Stream movie = createStream(details);
-					streaming.add(movie);
-					
+					if (details[1]==null) {
+						
+					}
+					//only adds the movies/shows that meet the choices requirements
+					else if (details[1].equals(type)) {
+							if (details[4].equals(rating)) {
+								if (details[5].equals(genre)) {
+									Stream movie = createStream(details);
+									streaming.add(movie);
+									count++;
+								}
+							}
+						}
+					//we only want 3 choices so loop is broken when count is 3
+					if (count == 3)break;
 					line = reader.readLine();
 				}
 			}
@@ -127,7 +140,7 @@ class Stream {
 
 	@Override 
 	public String toString() {
-		return "Choice title is : "+title+", its is a : "+type+", it came out in "+year+", on "+streamingService+"."; 
+		return "Choice title is : "+title+", its is a : "+genre+", it came out in "+year+", on "+streamingService+"."; 
 
 	} 
 
