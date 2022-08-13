@@ -14,8 +14,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-//import javafx.scene.layout.AnchorPane;
-//import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class SelectServiceController implements Initializable{
@@ -87,21 +85,41 @@ public class SelectServiceController implements Initializable{
     	    		&& !primeCheckBox.isSelected()
     	    		&& !huluCheckBox.isSelected()) {
     			;
+    			Parent root = FXMLLoader.load(getClass().getResource("/fxmlFiles/SpecificationsView.fxml"));
+            	stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            	scene = new Scene (root);
+            	stage.setScene(scene);
+            	stage.show();
     		}
-    		else if (disneyCheckBox.isSelected()&& !netflixCheckBox.isSelected()
+    		if (disneyCheckBox.isSelected()&& !netflixCheckBox.isSelected()
     	    		&& !primeCheckBox.isSelected()
     	    		&& !huluCheckBox.isSelected()) {
     			;
+    			Parent root = FXMLLoader.load(getClass().getResource("/fxmlFiles/SpecificationsView.fxml"));
+            	stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            	scene = new Scene (root);
+            	stage.setScene(scene);
+            	stage.show();
     		}
-    		else if (primeCheckBox.isSelected()&& !disneyCheckBox.isSelected()
+    		if (primeCheckBox.isSelected()&& !disneyCheckBox.isSelected()
     	    		&& !netflixCheckBox.isSelected()
     	    		&& !huluCheckBox.isSelected()) {
     			;
+    			Parent root = FXMLLoader.load(getClass().getResource("/fxmlFiles/SpecificationsView.fxml"));
+            	stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            	scene = new Scene (root);
+            	stage.setScene(scene);
+            	stage.show();
     		}
-    		else if (huluCheckBox.isSelected()&& !disneyCheckBox.isSelected()
+    		if (huluCheckBox.isSelected()&& !disneyCheckBox.isSelected()
     	    		&& !primeCheckBox.isSelected()
     	    		&& !netflixCheckBox.isSelected()) {
     			;
+    			Parent root = FXMLLoader.load(getClass().getResource("/fxmlFiles/SpecificationsView.fxml"));
+            	stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            	scene = new Scene (root);
+            	stage.setScene(scene);
+            	stage.show();
     		}
     		
     		/**
@@ -110,11 +128,7 @@ public class SelectServiceController implements Initializable{
     		 * 
     		 * @throws IOException -- 
     		 */
-    		Parent root = FXMLLoader.load(getClass().getResource("/fxmlFiles/SpecificationsView.fxml"));
-        	stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        	scene = new Scene (root);
-        	stage.setScene(scene);
-        	stage.show();
+    		
     	}
  
     }
