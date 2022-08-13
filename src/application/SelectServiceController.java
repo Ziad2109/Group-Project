@@ -85,42 +85,30 @@ public class SelectServiceController implements Initializable{
     	    		&& !primeCheckBox.isSelected()
     	    		&& !huluCheckBox.isSelected()) {
     			;
-    			Parent root = FXMLLoader.load(getClass().getResource("/fxmlFiles/SpecificationsView.fxml"));
-            	stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-            	scene = new Scene (root);
-            	stage.setScene(scene);
-            	stage.show();
     		}
-    		if (disneyCheckBox.isSelected()&& !netflixCheckBox.isSelected()
+    		else if (disneyCheckBox.isSelected()&& !netflixCheckBox.isSelected()
     	    		&& !primeCheckBox.isSelected()
     	    		&& !huluCheckBox.isSelected()) {
     			;
-    			Parent root = FXMLLoader.load(getClass().getResource("/fxmlFiles/SpecificationsView.fxml"));
-            	stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-            	scene = new Scene (root);
-            	stage.setScene(scene);
-            	stage.show();
     		}
-    		if (primeCheckBox.isSelected()&& !disneyCheckBox.isSelected()
+    		else if (primeCheckBox.isSelected()&& !disneyCheckBox.isSelected()
     	    		&& !netflixCheckBox.isSelected()
     	    		&& !huluCheckBox.isSelected()) {
     			;
-    			Parent root = FXMLLoader.load(getClass().getResource("/fxmlFiles/SpecificationsView.fxml"));
-            	stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-            	scene = new Scene (root);
-            	stage.setScene(scene);
-            	stage.show();
     		}
-    		if (huluCheckBox.isSelected()&& !disneyCheckBox.isSelected()
+    		else if (huluCheckBox.isSelected()&& !disneyCheckBox.isSelected()
     	    		&& !primeCheckBox.isSelected()
     	    		&& !netflixCheckBox.isSelected()) {
     			;
-    			Parent root = FXMLLoader.load(getClass().getResource("/fxmlFiles/SpecificationsView.fxml"));
-            	stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-            	scene = new Scene (root);
-            	stage.setScene(scene);
-            	stage.show();
-    		}
+    		} else {
+    			return;
+    			
+    		} Parent root = FXMLLoader.load(getClass().getResource("/application/fxmlFiles/SpecificationsView.fxml"));
+        	stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        	scene = new Scene (root);
+        	stage.setScene(scene);
+        	stage.show();
+    		
     		
     		/**
     		 * I learned this code from Bro Code on YouTube
