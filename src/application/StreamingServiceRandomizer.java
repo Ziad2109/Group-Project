@@ -36,7 +36,7 @@ public class StreamingServiceRandomizer {
     	Object maturityRating = maturityRatingChoiceBox.getValue();
     	System.out.println("Maturity rating selected: "+ maturityRating);
     	
-    	Object streamingService = streamingServiceChoiceBox.getValue();
+    	String streamingService = String.valueOf(streamingServiceChoiceBox.getValue());
     	System.out.println("Prefered streaming service: "+ streamingService);
     	
     	Object genre = genreChoiceBox.getValue();
@@ -44,7 +44,14 @@ public class StreamingServiceRandomizer {
     	
     	StreamDirectory value = new StreamDirectory();
     	//value =  Stream(String.valueOf(viewType), String.valueOf(yearReleased),String.valueOf(maturityRating), String.valueOf(genre), String.valueOf(streamingService));
-    	System.out.println("Result: "+ value.FromDirectory("src/application/Directory.csv"));
+    	if (streamingService.equals("Netflix"))
+    		System.out.println("Result: "+ value.FromDirectory("src/application/Netflix.csv"));
+    	else if(streamingService.equals("Disney+"))
+    		System.out.println("Result: "+ value.FromDirectory("src/application/Disney+.csv"));
+    	else if (streamingService.equals("Hulu"))
+    		System.out.println("Result: "+ value.FromDirectory("src/application/Hulu.csv"));
+    	else
+    		System.out.println("Result: "+ value.FromDirectory("src/application/Amazon Prime.csv"));
     	//treeRandomizedChoices = String[] myStringArray = {"a", "b", "c"};
     	//System.out.println("Your three choices are: CSI Miami, NCIS, House" );
     	// Display result in the window

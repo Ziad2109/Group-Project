@@ -127,7 +127,7 @@ class Stream {
 
 	@Override 
 	public String toString() {
-		return "Choice title is : "+title+", its is a : "+type+", it came out in "+year+". "; 
+		return "Choice title is : "+title+", its is a : "+type+", it came out in "+year+", on "+streamingService+"."; 
 
 	} 
 
