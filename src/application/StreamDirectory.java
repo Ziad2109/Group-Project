@@ -32,7 +32,7 @@ public class StreamDirectory{
 				while(line!=null){
 					
 					String[] details = line.split(",");
-					if (details[1]==null) {
+					if (details.length==0) {
 						
 					}
 					//only adds the movies/shows that meet the choices requirements
@@ -46,7 +46,7 @@ public class StreamDirectory{
 							}
 						}
 					//we only want 3 choices so loop is broken when count is 3
-					if (count == 3)break;
+					if (count == 6)break;
 					line = reader.readLine();
 				}
 			}
