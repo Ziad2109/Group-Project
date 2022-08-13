@@ -12,8 +12,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+//import javafx.scene.layout.AnchorPane;
+//import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class SelectServiceController implements Initializable{
@@ -44,6 +47,9 @@ public class SelectServiceController implements Initializable{
 
     @FXML
     private CheckBox disneyCheckBox;
+    
+    @FXML
+    private Label serviceErrorLabel;
     
     @Override 
     public void initialize (URL url, ResourceBundle rb) {
@@ -79,7 +85,7 @@ public class SelectServiceController implements Initializable{
     		&& !disneyCheckBox.isSelected()
     		&& !primeCheckBox.isSelected()
     		&& !huluCheckBox.isSelected()) {
-    		;
+    		serviceErrorLabel.setText("Please select one streaming service");
     	} else {
     		if (netflixCheckBox.isSelected()&& !disneyCheckBox.isSelected()
     	    		&& !primeCheckBox.isSelected()
@@ -101,14 +107,10 @@ public class SelectServiceController implements Initializable{
     	    		&& !netflixCheckBox.isSelected()) {
     			;
     		} else {
-    			return;
     			
-    		} Parent root = FXMLLoader.load(getClass().getResource("/application/fxmlFiles/SpecificationsView.fxml"));
-        	stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        	scene = new Scene (root);
-        	stage.setScene(scene);
-        	stage.show();
-    		
+    			serviceErrorLabel.setText("Please select only one streaming service");
+    			return;
+    		}
     		
     		/**
     		 * I learned this code from Bro Code on YouTube
@@ -116,7 +118,11 @@ public class SelectServiceController implements Initializable{
     		 * 
     		 * @throws IOException -- 
     		 */
-    		
+    		Parent root = FXMLLoader.load(getClass().getResource("/fxmlFiles/SpecificationsView.fxml"));
+        	stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        	scene = new Scene (root);
+        	stage.setScene(scene);
+        	stage.show();
     	}
  
     }
