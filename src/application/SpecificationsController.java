@@ -36,11 +36,10 @@ public class SpecificationsController {
     	
     	//
     	//streamingService = tixbox choice
-    	SelectServiceController service = new SelectServiceController();
     	
-    	String streamingService = "";
     	
-    	streamingService = service.tikChoice;
+    	
+    	String streamingService = SelectServiceController.tikChoice;
     	
     	StreamDirectory value = new StreamDirectory();
     	
