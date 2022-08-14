@@ -20,10 +20,39 @@ import java.util.List;
 
 public class StreamDirectory{ 
 	
+	private int getLowerYear(String range) {
+        String[] items = range.split("-");
+        try {
+            return Integer.parseInt(items[0]);
+        } catch (Exception e) {
+            if (items[0].equals("pre")) {
+            	return 0;
+            }
+            return 2011;
+            
+        }
+    }
+
+    private int getUpperYear(String range) {
+        String[] items = range.split("-");
+        
+        try {
+            Integer.parseInt(items[0]);
+            return Integer.parseInt(items[1]);
+        } catch (Exception e) {
+        	if (items[0].equals("pre")) {
+            	return 1979;
+            }
+            return 9999;
+        }
+    }
 	public List<Stream> FromDirectory(String fileName, String type, String year, String rating, String genre) {
 		List<Stream> streaming = new ArrayList<>();
 		
-		
+		int lowerYear = getLowerYear(year);
+        int upperYear = getUpperYear(year);
+        System.out.println(lowerYear);
+        System.out.println(upperYear);
 		try {
 			try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
 				String line = reader.readLine();
@@ -32,11 +61,14 @@ public class StreamDirectory{
 				while(line!=null){
 					
 					String[] details = line.split(",");
+					
 					if (details.length==0) {
 						
 					}
 					//only adds the movies/shows that meet the choices requirements
 					else if (details[1].equals(type)) {
+						int currentYear = Integer.parseInt(details[3]);
+						if	(currentYear >= lowerYear && currentYear <= upperYear) {
 							if (details[4].equals(rating)) {
 								if (details[5].equals(genre)) {
 									Stream movie = createStream(details);
@@ -44,7 +76,8 @@ public class StreamDirectory{
 									count++;
 								}
 							}
-						}
+						}	
+					}
 					//we only want 3 choices so loop is broken when count is 3
 					if (count == 3)break;
 					line = reader.readLine();
