@@ -36,11 +36,12 @@ public class StreamingServiceRandomizer {
     	String maturityRating = String.valueOf(maturityRatingChoiceBox.getValue());
     	System.out.println("Maturity rating selected: "+ maturityRating);
     	
+    	String genre = String.valueOf(genreChoiceBox.getValue());
+    	System.out.println("Genre selected: "+ genre);
+    	
     	String streamingService = String.valueOf(streamingServiceChoiceBox.getValue());
     	System.out.println("Prefered streaming service: "+ streamingService);
     	
-    	String genre = String.valueOf(genreChoiceBox.getValue());
-    	System.out.println("Genre selected: "+ genre);
     	
     	StreamDirectory value = new StreamDirectory();
     	//value =  Stream(String.valueOf(viewType), String.valueOf(yearReleased),String.valueOf(maturityRating), String.valueOf(genre), String.valueOf(streamingService));
@@ -53,7 +54,7 @@ public class StreamingServiceRandomizer {
     	else
     		System.out.println("Result: "+ value.FromDirectory("src/application/Amazon Prime.csv",viewType,yearReleased,maturityRating,genre));
     	// Display result in the window
-    	threeRandomizedSuggestionsLabel.setText(String.format("Your three choices are: CSI Miami, NCIS, House"));
+    	//threeRandomizedSuggestionsLabel.setText(String.format("Your three choices are: CSI Miami, NCIS, House"));
     	
 
     }

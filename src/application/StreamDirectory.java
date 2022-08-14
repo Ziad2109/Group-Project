@@ -46,7 +46,7 @@ public class StreamDirectory{
 							}
 						}
 					//we only want 3 choices so loop is broken when count is 3
-					if (count == 1)break;
+					if (count == 3)break;
 					line = reader.readLine();
 				}
 			}
