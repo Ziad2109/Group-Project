@@ -68,14 +68,14 @@ public class SpecificationsController {
     	
     	//value =  Stream(String.valueOf(viewType), String.valueOf(yearReleased),String.valueOf(maturityRating), String.valueOf(genre), String.valueOf(streamingService));
     	if (streamingService.equals("Netflix"))
-    		System.out.println("Result: "+ value.FromDirectory("src/resources/Netflix.csv",viewType,yearReleased,maturityRating,genre));
+    		System.out.println("Result: "+ value.FromDirectory("src/application/Netflix.csv",viewType,yearReleased,maturityRating,genre));
     		
     	else if(streamingService.equals("Disney+"))
-    		System.out.println("Result: "+ value.FromDirectory("src/resources/Disney+.csv",viewType,yearReleased,maturityRating,genre));
+    		System.out.println("Result: "+ value.FromDirectory("src/application/Disney+.csv",viewType,yearReleased,maturityRating,genre));
     	else if (streamingService.equals("Hulu"))
-    		System.out.println("Result: "+ value.FromDirectory("src/resources/Hulu.csv",viewType,yearReleased,maturityRating,genre));
+    		System.out.println("Result: "+ value.FromDirectory("src/application/Hulu.csv",viewType,yearReleased,maturityRating,genre));
     	else if (streamingService.equals("Prime"))
-    		System.out.println("Result: "+ value.FromDirectory("src/resources/Amazon Prime.csv",viewType,yearReleased,maturityRating,genre));
+    		System.out.println("Result: "+ value.FromDirectory("src/application/Amazon Prime.csv",viewType,yearReleased,maturityRating,genre));
     	
     	
     	if (results.isEmpty()) resultsLabel.setText("No results found, please adjust specifications");
