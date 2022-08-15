@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.collections.*?>
 <?import javafx.geometry.*?>
@@ -9,133 +10,183 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.collections.FXCollections?>
 
-<VBox alignment="CENTER" prefHeight="428.0" prefWidth="352.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SpecificationsController">
+<HBox prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SpecificationsController">
    <children>
-      <VBox alignment="CENTER" prefHeight="109.0" prefWidth="352.0">
+      <VBox alignment="CENTER" prefHeight="500.0" prefWidth="300.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Choose Specifications">
+            <VBox alignment="CENTER" prefHeight="109.0" prefWidth="352.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Choose Specifications">
+                     <font>
+                        <Font name="Avenir Light" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="20.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Movie or TV Show">
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+                  <ChoiceBox fx:id="typeChoiceBox" prefHeight="27.0" prefWidth="244.0">
+                  	<items>
+                  		<FXCollections fx:factory="observableArrayList">
+                  			<String fx:value="Movie" />
+                  			<String fx:value="TV Show" />
+                  		</FXCollections>
+                  	</items>
+                  </ChoiceBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Genre">
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+                  <ChoiceBox fx:id="genreChoiceBox" prefHeight="27.0" prefWidth="244.0">
+                  	<items>
+                  		<FXCollections fx:factory="observableArrayList">
+      	                 			<String fx:value="Action and Adventure" />
+      								<String fx:value="Adult" />
+      								<String fx:value="Animated" />
+      								<String fx:value="Arts" />
+      								<String fx:value="Biographical" />
+      								<String fx:value="Black Stories" />
+      								<String fx:value="British" />
+      								<String fx:value="Cartoons" />
+      								<String fx:value="Classic" />
+      								<String fx:value="Comedy" />
+      								<String fx:value="Coming of Age" />
+      								<String fx:value="Cooking" />
+      								<String fx:value="Crime" />
+      								<String fx:value="Documentary" />
+      								<String fx:value="Drama" />
+      								<String fx:value="Family" />
+      								<String fx:value="Fantasy" />
+      								<String fx:value="History" />
+      								<String fx:value="Horror" />
+      								<String fx:value="Independent" />
+      								<String fx:value="Kids" />
+      								<String fx:value="Latino" />
+      								<String fx:value="LGBTQ" />
+      								<String fx:value="Lifestyle" />
+      								<String fx:value="Military and War" />
+      								<String fx:value="Nature" />
+      								<String fx:value="Reality" />
+      								<String fx:value="Romance" />
+      								<String fx:value="Sci-Fi and Fantasy" />
+      								<String fx:value="Sports" />
+      	                 		</FXCollections>
+      	                   </items>
+                        </ChoiceBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Matrurity Rating">
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+                  <ChoiceBox fx:id="maturityChoiceBox" prefHeight="27.0" prefWidth="244.0">
+                  	<items>
+                  		<FXCollections fx:factory="observableArrayList">
+            			<String fx:value="TV-Y7" />
+						<String fx:value="G" />
+						<String fx:value="PG" />
+						<String fx:value="PG-13" />
+						<String fx:value="TV-14" />
+						<String fx:value="16+" />
+						<String fx:value="Mature" />
+						<String fx:value="18+" />
+						<String fx:value="R" />
+                  		</FXCollections>
+                  	</items>
+                  </ChoiceBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Release Year">
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+                  <ChoiceBox fx:id="releaseChoiceBox" prefHeight="27.0" prefWidth="244.0">
+                  	<items>
+                  		<FXCollections fx:factory="observableArrayList">
+                  			<String fx:value="pre-1980" />
+                  			<String fx:value="1980-1999" />
+                  			<String fx:value="2000-2010" />
+                  			<String fx:value="post-2010" />
+                  		</FXCollections>
+                  	</items>
+                  </ChoiceBox>
+               </children>
+            </VBox>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#createRecommendations" text="Find What to Watch">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="500.0" prefWidth="400.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Results" textAlignment="CENTER">
                <font>
-                  <Font name="Avenir Light" size="20.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" prefHeight="40.0" prefWidth="255.0" text="check the box of which  specifications &#10;you would prefer.">
-               <font>
-                  <Font name="Avenir Light" size="12.0" />
+                  <Font name="Avenir Oblique" size="20.0" />
                </font>
                <VBox.margin>
-                  <Insets />
+                  <Insets bottom="5.0" top="5.0" />
                </VBox.margin>
             </Label>
-         </children>
-         <VBox.margin>
-            <Insets bottom="10.0" top="20.0" />
-         </VBox.margin>
-      </VBox>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-         <children>
-            <Label text="Movie or TV Show">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-            </Label>
-            <ChoiceBox fx:id="typeChoiceBox" prefHeight="27.0" prefWidth="244.0" >
-            	<items>
-            		<FXCollections fx:factory="observableArrayList">
-            			<String fx:value="Movie" />
-            			<String fx:value="TV Show" />
-            		</FXCollections>
-            	</items>
-            </ChoiceBox>
-         </children>
-      </VBox>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-         <children>
-            <Label text="Genre">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-            </Label>
-            <ChoiceBox fx:id="genreChoiceBox" prefHeight="27.0" prefWidth="244.0" >
-            	<items>
-            		<FXCollections fx:factory="observableArrayList">
-	                 			<String fx:value="Action and Adventure" />
-								<String fx:value="Adult" />
-								<String fx:value="Animated" />
-								<String fx:value="Arts" />
-								<String fx:value="Biographical" />
-								<String fx:value="Black Stories" />
-								<String fx:value="British" />
-								<String fx:value="Cartoons" />
-								<String fx:value="Classic" />
-								<String fx:value="Comedy" />
-								<String fx:value="Coming of Age" />
-								<String fx:value="Cooking" />
-								<String fx:value="Crime" />
-								<String fx:value="Documentary" />
-								<String fx:value="Drama" />
-								<String fx:value="Family" />
-								<String fx:value="Fantasy" />
-								<String fx:value="History" />
-								<String fx:value="Horror" />
-								<String fx:value="Independent" />
-								<String fx:value="Kids" />
-								<String fx:value="Latino" />
-								<String fx:value="LGBTQ" />
-								<String fx:value="Lifestyle" />
-								<String fx:value="Military and War" />
-								<String fx:value="Nature" />
-								<String fx:value="Reality" />
-								<String fx:value="Romance" />
-								<String fx:value="Sci-Fi and Fantasy" />
-								<String fx:value="Sports" />
-	                 		</FXCollections>
-	                   </items>
-                  </ChoiceBox>
+            <Label fx:id="resultsLabel" prefHeight="27.0" prefWidth="259.0" textAlignment="CENTER" textFill="RED" />
+            <VBox prefHeight="110.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="title" text="Title">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="25.0" prefWidth="400.0">
+                     <children>
+                        <Label fx:id="genre" prefHeight="16.0" prefWidth="135.0" text="Genre" textAlignment="RIGHT">
+                           <font>
+                              <Font name="Arial Italic" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="year" prefHeight="16.0" prefWidth="95.0" text="Year" textAlignment="RIGHT">
+                           <font>
+                              <Font name="Arial Italic" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="service" alignment="CENTER_RIGHT" contentDisplay="BOTTOM" prefHeight="16.0" prefWidth="172.0" text="On Netflix" textAlignment="RIGHT">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
          </children>
       </VBox>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-         <children>
-            <Label text="Matrurity Rating">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-            </Label>
-            <ChoiceBox fx:id="maturityChoiceBox" prefHeight="27.0" prefWidth="244.0" >
-            	<items>
-            		<FXCollections fx:factory="observableArrayList">
-            			<String fx:value="G / TV-Y7" />
-            			<String fx:value="PG" />
-            			<String fx:value="PG-13 / TV-14" />
-            			<String fx:value="16+" />
-            			<String fx:value="Mature / R" />
-            		</FXCollections>
-            	</items>
-            </ChoiceBox>
-         </children>
-      </VBox>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-         <children>
-            <Label text="Release Year">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-            </Label>
-            <ChoiceBox fx:id="releaseChoiceBox" prefHeight="27.0" prefWidth="244.0">
-            	<items>
-            		<FXCollections fx:factory="observableArrayList">
-            			<String fx:value="pre-1980" />
-            			<String fx:value="1980-1999" />
-            			<String fx:value="2000-2010" />
-            			<String fx:value="post-2010" />
-            		</FXCollections>
-            	</items>
-            </ChoiceBox>
-         </children>
-      </VBox>
-      <Button alignment="CENTER" mnemonicParsing="false" onAction="#createRecommendations" text="Find What to Watch">
-         <VBox.margin>
-            <Insets bottom="20.0" top="20.0" />
-         </VBox.margin>
-      </Button>
    </children>
-</VBox>
+</HBox>

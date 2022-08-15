@@ -75,6 +75,8 @@ public class SelectServiceController implements Initializable{
     	stage.show();
     	
     }
+	static String tikChoice ="";
+
 
 	public Stage applicationStage;
 
@@ -90,22 +92,23 @@ public class SelectServiceController implements Initializable{
     		if (netflixCheckBox.isSelected()&& !disneyCheckBox.isSelected()
     	    		&& !primeCheckBox.isSelected()
     	    		&& !huluCheckBox.isSelected()) {
-    			;
+    			tikChoice = "Netflix";
     		}
     		else if (disneyCheckBox.isSelected()&& !netflixCheckBox.isSelected()
     	    		&& !primeCheckBox.isSelected()
     	    		&& !huluCheckBox.isSelected()) {
-    			;
+    			tikChoice = "Disney+";
     		}
     		else if (primeCheckBox.isSelected()&& !disneyCheckBox.isSelected()
     	    		&& !netflixCheckBox.isSelected()
     	    		&& !huluCheckBox.isSelected()) {
-    			;
+    			tikChoice = "Prime";
+    			
     		}
     		else if (huluCheckBox.isSelected()&& !disneyCheckBox.isSelected()
     	    		&& !primeCheckBox.isSelected()
     	    		&& !netflixCheckBox.isSelected()) {
-    			;
+    			tikChoice = "Hulu";
     		} else {
     			
     			serviceErrorLabel.setText("Please select only one streaming service");
@@ -123,6 +126,7 @@ public class SelectServiceController implements Initializable{
         	scene = new Scene (root);
         	stage.setScene(scene);
         	stage.show();
+        	
     	}
  
     }
