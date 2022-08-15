@@ -38,11 +38,12 @@ public class StreamingServiceRandomizer {
     	String maturityRating = String.valueOf(maturityRatingChoiceBox.getValue());
     	System.out.println("Maturity rating selected: "+ maturityRating);
     	
+    	String genre = String.valueOf(genreChoiceBox.getValue());
+    	System.out.println("Genre selected: "+ genre);
+    	
     	String streamingService = String.valueOf(streamingServiceChoiceBox.getValue());
     	System.out.println("Prefered streaming service: "+ streamingService);
     	
-    	String genre = String.valueOf(genreChoiceBox.getValue());
-    	System.out.println("Genre selected: "+ genre);
     	
     	StreamDirectory value = new StreamDirectory();
     	ThreadLocalRandom random = ThreadLocalRandom. current(); 
@@ -86,6 +87,7 @@ public class StreamingServiceRandomizer {
     	}
     	// Display result in the window
 //    	threeRandomizedSuggestionsLabel.setText(String.format("Your three choices are: CSI Miami, NCIS, House"));
+    	//threeRandomizedSuggestionsLabel.setText(String.format("Your three choices are: CSI Miami, NCIS, House"));
     	
 
     }
