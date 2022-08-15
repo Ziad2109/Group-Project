@@ -19,34 +19,59 @@ import java.util.List;
 */ 
 
 public class StreamDirectory{ 
-	
+	public List<Stream> streaming = new ArrayList<>();
 	public List<Stream> FromDirectory(String fileName, String type, String year, String rating, String genre) {
-		List<Stream> streaming = new ArrayList<>();
-		
-		
+		List<Stream> choices = new ArrayList<>();
 		try {
 			try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
 				String line = reader.readLine();
-				int count = 0;
-				//loop through csv file to read movies and shows
+				//loop through CSV file to read movies and shows
+				streaming.clear();
 				while(line!=null){
-					
 					String[] details = line.split(",");
 					if (details.length==0) {
 						
 					}
 					//only adds the movies/shows that meet the choices requirements
-					else if (details[1].equals(type)) {
-							if (details[4].equals(rating)) {
-								if (details[5].equals(genre)) {
-									Stream movie = createStream(details);
-									streaming.add(movie);
-									count++;
-								}
-							}
+					else if (year.equals("pre-1980")) {
+						int yearRealeased = 1980;
+						if (details[1].equals(type) && details[4].equals(rating)
+								&&details[5].equals(genre)&&Integer.parseInt(details[3])<yearRealeased) {
+							Stream movie = createStream(details);
+							streaming.add(movie);
 						}
+					}
+					else if (year.equals("1980-2000")) {
+						int lowEnd = 1980;
+						int highEnd = 2000;
+						if (details[1].equals(type) && details[4].equals(rating)
+								&&details[5].equals(genre)
+								&&Integer.parseInt(details[3])<highEnd&&Integer.parseInt(details[3])>lowEnd) {
+							Stream movie = createStream(details);
+							streaming.add(movie);
+						}
+					}
+					else if (year.equals("2000-2010")) {
+						int lowEnd = 2000;
+						int highEnd = 2010;
+						if (details[1].equals(type) && details[4].equals(rating)
+								&&details[5].equals(genre)
+								&&Integer.parseInt(details[3])<highEnd&&Integer.parseInt(details[3])>lowEnd) {
+							Stream movie = createStream(details);
+							streaming.add(movie);
+						}
+					}
+					else if (year.equals("post-2010")) {
+						int yearReleased = 2010;
+						if (details[1].equals(type) && details[4].equals(rating)
+								&&details[5].equals(genre)
+								&&Integer.parseInt(details[3])>yearReleased) {
+							Stream movie = createStream(details);
+							streaming.add(movie);
+						}
+					}
 					//we only want 3 choices so loop is broken when count is 3
-					if (count == 6)break;
+//					if (count == 1001)break;
 					line = reader.readLine();
 				}
 			}
@@ -58,7 +83,12 @@ public class StreamDirectory{
 		}
 		return streaming; 
 	}
-
+	
+	public int rand() {
+		
+		return 0;
+	}
+	
 	private static Stream createStream(String[] metadata) { 
 		String type = metadata[1]; 
 		String title = metadata[2]; 
