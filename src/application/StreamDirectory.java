@@ -11,15 +11,17 @@ import java.io.IOException;
 import java.util.ArrayList; 
 import java.util.List; 
 
-/**
-* Simple Java program to read CSV file in Java. In this program we will read 
-* list of streaming stored in CSV file as comma separated values. * 
-* @author WINDOWS 8 
-* 
-*/ 
-
 public class StreamDirectory{ 
+	private static List<String> results = new ArrayList<>();
 	
+	
+	public static List<String> getResults() {
+		return results;
+		}
+	
+	
+	
+
 	private int getLowerYear(String range) {
         String[] items = range.split("-");
         try {
@@ -56,7 +58,6 @@ public class StreamDirectory{
 		try {
 			try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
 				String line = reader.readLine();
-				int count = 0;
 				//loop through csv file to read movies and shows
 				while(line!=null){
 					
@@ -73,14 +74,15 @@ public class StreamDirectory{
 								if (details[5].equals(genre)) {
 									Stream movie = createStream(details);
 									streaming.add(movie);
-									count++;
+									results.add(details[2]);
 								}
 							}
 						}	
 					}
 					//we only want 3 choices so loop is broken when count is 3
-					if (count == 3)break;
+
 					line = reader.readLine();
+					
 				}
 			}
 			
@@ -173,6 +175,7 @@ class Stream {
 
 	@Override 
 	public String toString() {
+		
 		return "Choice title is : "+title+", its is a : "+genre+", it came out in "+year+", on "+streamingService+"."; 
 
 	} 
