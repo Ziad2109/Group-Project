@@ -65,6 +65,7 @@ public class SpecificationsController {
     	StreamDirectory value = new StreamDirectory();
     	
     	List<String> results = StreamDirectory.getResults();
+    	List<String> yearValue = StreamDirectory.getYear();
     	
     	
     	//value =  Stream(String.valueOf(viewType), String.valueOf(yearReleased),String.valueOf(maturityRating), String.valueOf(genre), String.valueOf(streamingService));
@@ -84,6 +85,7 @@ public class SpecificationsController {
     		resultsLabel.setText(String.format(results.size()+ " Result Found"));
     		title.setText(String.format(results.get(Random(results.size()))));
     		results.remove(1);
+    		year.setText(String.format(yearValue.get(Random(yearValue.size()))));
     		 
     		
     	}

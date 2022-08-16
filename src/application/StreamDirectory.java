@@ -13,13 +13,15 @@ import java.util.List;
 
 public class StreamDirectory{ 
 	private static List<String> results = new ArrayList<>();
-	
+	private static List<String> yearValue = new ArrayList<>();
 	
 	public static List<String> getResults() {
 		return results;
 		}
 	
-	
+	public static List<String> getYear() {
+		return yearValue;
+		}
 	
 
 	private int getLowerYear(String range) {
@@ -75,6 +77,7 @@ public class StreamDirectory{
 									Stream movie = createStream(details);
 									streaming.add(movie);
 									results.add(details[2]);
+									yearValue.add(details[3]);
 								}
 							}
 						}	
@@ -176,7 +179,7 @@ class Stream {
 	@Override 
 	public String toString() {
 		
-		return "Choice title is : "+title+", its is a : "+genre+", it came out in "+year+", on "+streamingService+"."; 
+		return "Choice title is : "+title+", it came out in "+year+", on "+streamingService+"."; 
 
 	} 
 
