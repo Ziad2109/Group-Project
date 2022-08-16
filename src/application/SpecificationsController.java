@@ -41,7 +41,8 @@ public class SpecificationsController {
 
     @FXML
     void createRecommendations(ActionEvent event) {
-    	
+    	title.setText("");
+    	year.setText("");
     	
     	String yearReleased = String.valueOf(releaseChoiceBox.getValue());
     	System.out.println("Year of release: "+ yearReleased);
@@ -86,7 +87,7 @@ public class SpecificationsController {
     		title.setText(String.format(results.get(Random(results.size()))));
     		results.remove(1);
     		year.setText(String.format(yearValue.get(Random(yearValue.size()))));
-    		 
+    		
     		
     	}
     }

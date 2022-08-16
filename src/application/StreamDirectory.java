@@ -16,10 +16,12 @@ public class StreamDirectory{
 	private static List<String> yearValue = new ArrayList<>();
 	
 	public static List<String> getResults() {
+		 results.clear();
 		return results;
 		}
 	
 	public static List<String> getYear() {
+		yearValue.clear();
 		return yearValue;
 		}
 	
