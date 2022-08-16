@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List; 
 
 public class StreamDirectory{ 
+	List<Stream> streaming = new ArrayList<>();
 	private static List<String> results = new ArrayList<>();
 	private static List<String> yearValue = new ArrayList<>();
 	
@@ -53,7 +54,6 @@ public class StreamDirectory{
         }
     }
 	public List<Stream> FromDirectory(String fileName, String type, String year, String rating, String genre) {
-		List<Stream> streaming = new ArrayList<>();
 		
 		int lowerYear = getLowerYear(year);
         int upperYear = getUpperYear(year);
