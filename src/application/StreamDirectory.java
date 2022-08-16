@@ -62,6 +62,7 @@ public class StreamDirectory{
 				while(line!=null){
 					
 					String[] details = line.split(",");
+					//results.clear();
 					
 					if (details.length==0) {
 						
@@ -75,6 +76,7 @@ public class StreamDirectory{
 									Stream movie = createStream(details);
 									streaming.add(movie);
 									results.add(details[2]);
+									//results.clear();
 								}
 							}
 						}	
@@ -175,7 +177,7 @@ class Stream {
 	@Override 
 	public String toString() {
 		
-		return "Choice title is : "+title+", its is a : "+genre+", it came out in "+year+", on "+streamingService+"."; 
+		return "Choice title is : "+title+", it came out in "+year+", on "+streamingService+"."; 
 
 	} 
 
