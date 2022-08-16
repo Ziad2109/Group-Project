@@ -26,6 +26,7 @@ public class SpecificationsController {
     private Label title;
 
     @FXML
+
     private Label genre;
 
     @FXML
@@ -40,6 +41,7 @@ public class SpecificationsController {
    
 
     @FXML
+
     void createRecommendations(ActionEvent event) {
     	
     	
@@ -57,6 +59,7 @@ public class SpecificationsController {
     	
     	//
     	//streamingService = tixbox choice
+
     	 
     	
     	String streamingService = SelectServiceController.tikChoice;
@@ -64,20 +67,25 @@ public class SpecificationsController {
     	StreamDirectory value = new StreamDirectory();
     	
     	List<String> results = StreamDirectory.getResults();
+
     	
+    	
+    	
+    	String streamingService = SelectServiceController.tikChoice;
+    	
+    	StreamDirectory value = new StreamDirectory();
+
     	
     	//value =  Stream(String.valueOf(viewType), String.valueOf(yearReleased),String.valueOf(maturityRating), String.valueOf(genre), String.valueOf(streamingService));
     	if (streamingService.equals("Netflix"))
     		System.out.println("Result: "+ value.FromDirectory("src/application/Netflix.csv",viewType,yearReleased,maturityRating,genre));
-    		
     	else if(streamingService.equals("Disney+"))
     		System.out.println("Result: "+ value.FromDirectory("src/application/Disney+.csv",viewType,yearReleased,maturityRating,genre));
     	else if (streamingService.equals("Hulu"))
     		System.out.println("Result: "+ value.FromDirectory("src/application/Hulu.csv",viewType,yearReleased,maturityRating,genre));
     	else if (streamingService.equals("Prime"))
     		System.out.println("Result: "+ value.FromDirectory("src/application/Amazon Prime.csv",viewType,yearReleased,maturityRating,genre));
-    	
-    	
+
     	if (results.isEmpty()) resultsLabel.setText("No results found, please adjust specifications");
     	
     	else {
@@ -87,8 +95,6 @@ public class SpecificationsController {
     		 
     		
     	}
-   
-   
     }
 
 
@@ -97,6 +103,4 @@ public class SpecificationsController {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-    
-
 }

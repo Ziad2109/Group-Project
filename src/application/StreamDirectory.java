@@ -19,9 +19,6 @@ public class StreamDirectory{
 		return results;
 		}
 	
-	
-	
-	
 	private int getLowerYear(String range) {
         String[] items = range.split("-");
         try {
@@ -62,7 +59,6 @@ public class StreamDirectory{
 				while(line!=null){
 					
 					String[] details = line.split(",");
-					//results.clear();
 					
 					if (details.length==0) {
 						
@@ -82,6 +78,7 @@ public class StreamDirectory{
 						}	
 					}
 					//we only want 3 choices so loop is broken when count is 3
+
 					line = reader.readLine();
 					
 				}
