@@ -1,10 +1,14 @@
 package application;
 
+import java.util.List;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 
 public class SpecificationsController {
+
 
     @FXML
     private ChoiceBox<?> releaseChoiceBox;
@@ -17,8 +21,27 @@ public class SpecificationsController {
 
     @FXML
     private ChoiceBox<?> genreChoiceBox;
+    
+    @FXML
+    private Label title;
 
     @FXML
+
+    private Label genre;
+
+    @FXML
+    private Label year;
+
+    @FXML
+    private Label resultsLabel;
+
+    @FXML
+    private Label service;
+    
+   
+
+    @FXML
+
     void createRecommendations(ActionEvent event) {
     	
     	
@@ -36,12 +59,22 @@ public class SpecificationsController {
     	
     	//
     	//streamingService = tixbox choice
+
+    	 
+    	
+    	String streamingService = SelectServiceController.tikChoice;
+    	
+    	StreamDirectory value = new StreamDirectory();
+    	
+    	List<String> results = StreamDirectory.getResults();
+
     	
     	
     	
     	String streamingService = SelectServiceController.tikChoice;
     	
     	StreamDirectory value = new StreamDirectory();
+
     	
     	//value =  Stream(String.valueOf(viewType), String.valueOf(yearReleased),String.valueOf(maturityRating), String.valueOf(genre), String.valueOf(streamingService));
     	if (streamingService.equals("Netflix"))
@@ -52,6 +85,22 @@ public class SpecificationsController {
     		System.out.println("Result: "+ value.FromDirectory("src/application/Hulu.csv",viewType,yearReleased,maturityRating,genre));
     	else if (streamingService.equals("Prime"))
     		System.out.println("Result: "+ value.FromDirectory("src/application/Amazon Prime.csv",viewType,yearReleased,maturityRating,genre));
+
+    	if (results.isEmpty()) resultsLabel.setText("No results found, please adjust specifications");
+    	
+    	else {
+    		resultsLabel.setText(String.format(results.size()+ " Result Found"));
+    		title.setText(String.format(results.get(Random(results.size()))));
+    		results.remove(1);
+    		 
+    		
+    	}
     }
 
+
+
+	private int Random(int size) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }
