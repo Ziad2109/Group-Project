@@ -67,14 +67,6 @@ public class SpecificationsController {
     	StreamDirectory value = new StreamDirectory();
     	
     	List<String> results = StreamDirectory.getResults();
-
-    	
-    	
-    	
-    	String streamingService = SelectServiceController.tikChoice;
-    	
-    	StreamDirectory value = new StreamDirectory();
-
     	
     	//value =  Stream(String.valueOf(viewType), String.valueOf(yearReleased),String.valueOf(maturityRating), String.valueOf(genre), String.valueOf(streamingService));
     	if (streamingService.equals("Netflix"))
