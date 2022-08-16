@@ -11,30 +11,81 @@ import java.io.IOException;
 import java.util.ArrayList; 
 import java.util.List; 
 
-/**
-* Simple Java program to read CSV file in Java. In this program we will read 
-* list of streaming stored in CSV file as comma separated values. * 
-* @author WINDOWS 8 
-* 
-*/ 
-
-public class StreamDirectory { 
+public class StreamDirectory{ 
+	private static List<String> results = new ArrayList<>();
+	private static List<String> yearValue = new ArrayList<>();
 	
-	public List<Stream> FromDirectory(String fileName) {
+	public static List<String> getResults() {
+		return results;
+		}
+	
+	public static List<String> getYear() {
+		return yearValue;
+		}
+	
+
+	private int getLowerYear(String range) {
+        String[] items = range.split("-");
+        try {
+            return Integer.parseInt(items[0]);
+        } catch (Exception e) {
+            if (items[0].equals("pre")) {
+            	return 0;
+            }
+            return 2011;
+            
+        }
+    }
+
+    private int getUpperYear(String range) {
+        String[] items = range.split("-");
+        
+        try {
+            Integer.parseInt(items[0]);
+            return Integer.parseInt(items[1]);
+        } catch (Exception e) {
+        	if (items[0].equals("pre")) {
+            	return 1979;
+            }
+            return 9999;
+        }
+    }
+	public List<Stream> FromDirectory(String fileName, String type, String year, String rating, String genre) {
 		List<Stream> streaming = new ArrayList<>();
 		
-		
+		int lowerYear = getLowerYear(year);
+        int upperYear = getUpperYear(year);
+        System.out.println(lowerYear);
+        System.out.println(upperYear);
 		try {
 			try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
 				String line = reader.readLine();
-				
-				for (int i = 0; i < 30; i++){
+				//loop through csv file to read movies and shows
+				while(line!=null){
 					
 					String[] details = line.split(",");
-					Stream movie = createStream(details);
-					streaming.add(movie);
 					
+					if (details.length==0) {
+						
+					}
+					//only adds the movies/shows that meet the choices requirements
+					else if (details[1].equals(type)) {
+						int currentYear = Integer.parseInt(details[3]);
+						if	(currentYear >= lowerYear && currentYear <= upperYear) {
+							if (details[4].equals(rating)) {
+								if (details[5].equals(genre)) {
+									Stream movie = createStream(details);
+									streaming.add(movie);
+									results.add(details[2]);
+									yearValue.add(details[3]);
+								}
+							}
+						}	
+					}
+					//we only want 3 choices so loop is broken when count is 3
+
 					line = reader.readLine();
+					
 				}
 			}
 			
@@ -127,7 +178,8 @@ class Stream {
 
 	@Override 
 	public String toString() {
-		return "Choice title is : "+title+", its is a : "+type+", it came out in "+year+". "; 
+		
+		return "Choice title is : "+title+", it came out in "+year+", on "+streamingService+"."; 
 
 	} 
 
