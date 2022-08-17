@@ -60,10 +60,13 @@ public class StreamDirectory{
 	public List<Stream> FromDirectory(String fileName, String type, String year, String rating, String genre) {
 		List<Stream> streaming = new ArrayList<>();
 		
+		
+		
 		int lowerYear = getLowerYear(year);
         int upperYear = getUpperYear(year);
         System.out.println(lowerYear);
         System.out.println(upperYear);
+        
 		try {
 			try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
 				String line = reader.readLine();
@@ -73,6 +76,8 @@ public class StreamDirectory{
 				while(line!=null){
 					
 					String[] details = line.split(",");
+					
+					if (year == null) break;
 					
 					if (details.length==0) {
 						
@@ -187,7 +192,7 @@ class Stream {
 	@Override 
 	public String toString() {
 		
-		return "Choice title is : "+title+", it came out in "+year+", on "+streamingService+"."; 
+		return "Choice title is : "+title+", its is a : "+genre+", it came out in "+year+", on "+streamingService+"."; 
 
 	} 
 

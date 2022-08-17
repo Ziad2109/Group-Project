@@ -67,14 +67,6 @@ public class SelectServiceController implements Initializable{
     	huluImage.setImage(huluLogo);
     }
     
-    public void switchToSpecifications (ActionEvent event) throws IOException {
-    	Parent root = FXMLLoader.load(getClass().getResource("/application/fxmlFiles/SpecificationsView.fxml"));
-    	stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-    	scene = new Scene (root);
-    	stage.setScene(scene);
-    	stage.show();
-    	
-    }
 	static String tikChoice ="";
 
 
