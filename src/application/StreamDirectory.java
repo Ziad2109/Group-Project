@@ -12,21 +12,26 @@ import java.util.ArrayList;
 import java.util.List; 
 
 public class StreamDirectory{ 
-	List<Stream> streaming = new ArrayList<>();
-	private static List<String> results = new ArrayList<>();
-	private static List<String> yearValue = new ArrayList<>();
+	private ArrayList<String> titleList = new ArrayList<>();
 	
-	public static List<String> getResults() {
-		 results.clear();
-		return results;
+	/**
+	 * Getter for the titleList instance variable
+	 * @returns titleList
+	 */
+	public ArrayList<String> getTitleList() { 
+		return titleList;
 		}
 	
-	public static List<String> getYear() {
-		yearValue.clear();
-		return yearValue;
+	private ArrayList<String> yearList = new ArrayList<>();
+	
+	/**
+	 * Getter for the yearList instance variable
+	 * @returns yearList
+	 */
+	public ArrayList<String> getYearList() {
+		return yearList;
 		}
 	
-
 	private int getLowerYear(String range) {
         String[] items = range.split("-");
         try {
@@ -36,7 +41,6 @@ public class StreamDirectory{
             	return 0;
             }
             return 2011;
-            
         }
     }
 
@@ -54,18 +58,26 @@ public class StreamDirectory{
         }
     }
 	public List<Stream> FromDirectory(String fileName, String type, String year, String rating, String genre) {
+		List<Stream> streaming = new ArrayList<>();
+		
+		
 		
 		int lowerYear = getLowerYear(year);
         int upperYear = getUpperYear(year);
         System.out.println(lowerYear);
         System.out.println(upperYear);
+        
 		try {
 			try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
 				String line = reader.readLine();
-				//loop through csv file to read movies and shows
+				titleList.clear(); // empties the resultsList everytime the user presses the button
+				yearList.clear(); // emptiers the yearLisr
+				
 				while(line!=null){
 					
 					String[] details = line.split(",");
+					
+					if (year == null) break;
 					
 					if (details.length==0) {
 						
@@ -78,14 +90,12 @@ public class StreamDirectory{
 								if (details[5].equals(genre)) {
 									Stream movie = createStream(details);
 									streaming.add(movie);
-									results.add(details[2]);
-									yearValue.add(details[3]);
+									titleList.add(details[2]);
+									yearList.add(details[3]);
 								}
 							}
 						}	
 					}
-					//we only want 3 choices so loop is broken when count is 3
-
 					line = reader.readLine();
 					
 				}
@@ -110,6 +120,7 @@ public class StreamDirectory{
 		// create and return book of this metadata
 		return new Stream(type, title, year, rating, genre, streamingService); 
 	}
+
 }
 
 class Stream { 
@@ -181,7 +192,7 @@ class Stream {
 	@Override 
 	public String toString() {
 		
-		return "Choice title is : "+title+", it came out in "+year+", on "+streamingService+"."; 
+		return "Choice title is : "+title+", its is a : "+genre+", it came out in "+year+", on "+streamingService+"."; 
 
 	} 
 

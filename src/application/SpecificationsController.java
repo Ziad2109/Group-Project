@@ -1,8 +1,7 @@
 package application;
 
-import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
-
+import java.util.ArrayList;
+import java.util.Random;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
@@ -10,9 +9,8 @@ import javafx.scene.control.Label;
 
 public class SpecificationsController {
 
-
     @FXML
-    private ChoiceBox<?> releaseChoiceBox;
+    private ChoiceBox<?> releaseYearChoiceBox;
 
     @FXML
     private ChoiceBox<?> typeChoiceBox;
@@ -27,9 +25,6 @@ public class SpecificationsController {
     private Label title;
 
     @FXML
-    private Label genre;
-
-    @FXML
     private Label year;
 
     @FXML
@@ -38,126 +33,116 @@ public class SpecificationsController {
     @FXML
     private Label service;
     
-   
+    @FXML
+    private Label specificationsErrorLabel;
+    
+    private void refresh() {
+    	/**
+    	 * method to refresh all the labels in the FXML file
+    	 * to an empty string
+    	 */
+    	resultsLabel.setText("");
+    	year.setText("");
+    	title.setText("");
+    	service.setText("");
+    	specificationsErrorLabel.setText("");
+    	
+	}
+    
+    private void SetErrorLabel (String text) {
+    	specificationsErrorLabel.setText("Please specifify " + text);
+    }
 
     @FXML
     void createRecommendations(ActionEvent event) {
-    	title.setText("");
-    	year.setText("");
-    	resultsLabel.setText("");
     	
-    	String yearReleased = String.valueOf(releaseChoiceBox.getValue());
-    	System.out.println("Year of release: "+ yearReleased);
-    	
+    	refresh(); //call refresh method
+   	 	
+    	/**
+    	 * gets values from the user 
+    	 * 
+    	 */
+    	String yearReleased = String.valueOf(releaseYearChoiceBox.getValue());
     	String viewType = String.valueOf(typeChoiceBox.getValue());
-    	System.out.println("Movie or Tv Show: "+ viewType);
-    	
     	String maturityRating = String.valueOf(maturityChoiceBox.getValue());
-    	System.out.println("Maturity rating selected: "+ maturityRating);
-    	
     	String genre = String.valueOf(genreChoiceBox.getValue());
-    	System.out.println("Genre selected: "+ genre);
+    	
+    	
+    	if (typeChoiceBox.getValue() == null) 
+    		//checks if the typeChoiceBox is empty
+    		SetErrorLabel ("media type");
+    	
+    	else if (genreChoiceBox.getValue() == null)
+    		//checks if the genreChoiceBox is empty
+    		SetErrorLabel ("genre");
+    	
+    	else if (maturityChoiceBox.getValue() == null)
+    		//checks if the maturityChoiceBox is empty
+    		SetErrorLabel ("media type");
+    	
+    	else if (releaseYearChoiceBox.getValue() == null)
+    		//checks if the releaseYearChoiceBox is empty & changes
+    		SetErrorLabel ("year range");
+    	
+    	else { 
+    		
+    		refresh();
+    	
+	    	System.out.println("Movie or Tv Show: "+ viewType);
+	    	System.out.println("Year of release: "+ yearReleased);
+	    	System.out.println("Genre selected: "+ genre);
+	    	System.out.println("Maturity rating selected: "+ maturityRating);
+	    	
+	    	
+	    	String streamingService = SelectServiceController.tikChoice;
+	    	System.out.println("Streaming Service: "+ streamingService);
+	    	
+	    	StreamDirectory value = new StreamDirectory();	//Create new object of StreamDirectory class named "value"
+	    	
+	    	String filePath = ""; 
+	    	
+	    	
+	    	if (SelectServiceController.tikChoice.equals("Netflix")) filePath = "src/application/Netflix.csv";
+	    	else if(SelectServiceController.tikChoice.equals("Disney+")) filePath = "src/application/Disney+.csv";
+	    	else if (SelectServiceController.tikChoice.equals("Hulu")) filePath = "src/application/Hulu.csv";
+	    	else if (SelectServiceController.tikChoice.equals("Prime")) filePath = "src/application/Amazon Prime.csv";
+	    	
+	    	/**
+	    	 * 
+	    	 * 
+	    	 */
+	    	System.out.println("Result: "+ value.FromDirectory(filePath,viewType,yearReleased,maturityRating,genre));
+	    	
+	    	ArrayList<String> titleList = value.getTitleList();
+	    	ArrayList<String> yearList = value.getYearList();
+	    	
+	    	/**
+	    	 * use of conditions to read titleList from StreamDirectory  
+	    	 * if titleList is empty: true -> it will display an error message that there are no results
+	    	 * else -> count the number or elements in the arraylist using titlelist.size and display number or results
+	    	 * 			adjust labels to display a results
+	    	 */
 
-    	//
-    	//streamingService = tixbox choice
-
-    	 
-    	
-    	String streamingService = SelectServiceController.tikChoice;
-    	System.out.println("Prefered streaming service: "+ streamingService);
-
-    	
-    	StreamDirectory value = new StreamDirectory();
-    	
-    	List<String> results = StreamDirectory.getResults();
-    	List<String> yearValue = StreamDirectory.getYear();
-    	
-    	
-    	ThreadLocalRandom random = ThreadLocalRandom. current(); 
-    	int rand1;
-    	int n = 3;
-    	//value =  Stream(String.valueOf(viewType), String.valueOf(yearReleased),String.valueOf(maturityRating), String.valueOf(genre), String.valueOf(streamingService));
-    	if (streamingService.equals("Netflix")) {
-        	System.out.println(value.FromDirectory("src/application/Netflix.csv",viewType,yearReleased,maturityRating,genre));
-        	if (value.streaming.isEmpty());
-        	else {
-        		if (value.streaming.size()<3) {
-        			n = value.streaming.size();
-        		}
-        	for(int i = 0;i<n;i++) {
-            	rand1 = random. nextInt(1, value.streaming.size());
-        		resultsLabel.setText(String.format(results.size()+ " Result Found"));
-        		title.setText(String.format(results.get(rand1)));
-        		results.remove(1);
-        		year.setText(String.format(yearValue.get(rand1)));
-    		System.out.println("Result: "+ value.FromDirectory("src/application/Netflix.csv",viewType,yearReleased,maturityRating,genre).get(rand1));
-        	}
-        	}
-    	}
-    	else if(streamingService.equals("Disney+")) {
-    		service.setText("On Disney+");
-        	value.FromDirectory("src/application/Disney+.csv",viewType,yearReleased,maturityRating,genre);
-        	if (value.streaming.isEmpty());
-        	else {
-        		if (value.streaming.size()<3) {
-        			n = value.streaming.size();
-        		}
-        	for(int i = 0;i<n;i++) {
-            	rand1 = random. nextInt(1, value.streaming.size());
-        		resultsLabel.setText(String.format(results.size()+ " Result Found"));
-        		title.setText(String.format(results.get(rand1)));
-        		results.remove(1);
-        		year.setText(String.format(yearValue.get(rand1)));
-    		System.out.println("Result: "+ value.FromDirectory("src/application/Disney+.csv",viewType,yearReleased,maturityRating,genre).get(rand1));
-        	}
-        	}
-    	}
-    	else if (streamingService.equals("Hulu")) {
-    		service.setText("Hulu");
-        	value.FromDirectory("src/application/Hulu.csv",viewType,yearReleased,maturityRating,genre);
-        	if (value.streaming.isEmpty());
-        	else {
-        		if (value.streaming.size()<3) {
-        			n = value.streaming.size();
-        		}
-        	for(int i = 0;i<n;i++) {
-            	rand1 = random. nextInt(1, value.streaming.size());
-        		resultsLabel.setText(String.format(results.size()+ " Result Found"));
-        		title.setText(String.format(results.get(rand1)));
-        		results.remove(1);
-        		year.setText(String.format(yearValue.get(rand1)));
-    		System.out.println("Result: "+ value.FromDirectory("src/application/Hulu.csv",viewType,yearReleased,maturityRating,genre).get(rand1));
-        	}
-        	}
-    	}
-    	else {
-    		service.setText("Amazon Prime");
-        	value.FromDirectory("src/application/Amazon Prime.csv",viewType,yearReleased,maturityRating,genre);
-        	if (value.streaming.isEmpty());
-        	else {
-        		if (value.streaming.size()<3) {
-        			n = value.streaming.size();
-        		}
-        	for(int i = 0;i<n;i++) {
-            	rand1 = random. nextInt(1, value.streaming.size());
-        		resultsLabel.setText(String.format(results.size()+ " Result Found"));
-        		title.setText(String.format(results.get(rand1)));
-        		results.remove(1);
-        		year.setText(String.format(yearValue.get(rand1)));
-    		System.out.println("Result: "+ value.FromDirectory("src/application/Amazon Prime.csv",viewType,yearReleased,maturityRating,genre).get(rand1));
-        	}
-        	}
-    	}
-    	
-    	if (results.isEmpty()) resultsLabel.setText("No results found, please adjust specifications");
+			 if (titleList.isEmpty())  resultsLabel.setText("No results found, please adjust specifications"); 
+			
+			 else {
+			 	Random rand = new Random();
+				 int upperbound = titleList.size();
+				 int RandomIndex = rand.nextInt(upperbound);
+				 
+				 /**
+				  * a new concept i learned: getting a random number
+				  * to run a random 
+				  * 
+				  */
+				
+				resultsLabel.setText(String.format(titleList.size()+ " Result Found"));
+					
+				title.setText(String.format(titleList.get(RandomIndex))); // the randomIndex integer picks a random integer using the random class
+				year.setText(String.format(yearList.get(RandomIndex))); // year label is adjusted to get the same random index as the title
+				service.setText(String.format("On " + streamingService)); // streaming service label is according to first class
+		 	}
+	
+	    }
     }
-
-
-
-	private int Random(int size) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-    
-
 }

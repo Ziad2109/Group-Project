@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.collections.FXCollections?>
 
-<HBox prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SpecificationsController">
+<VBox alignment="TOP_CENTER" prefHeight="661.0" prefWidth="401.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SpecificationsController">
    <children>
-      <VBox alignment="CENTER" prefHeight="500.0" prefWidth="300.0">
+      <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="300.0">
          <children>
             <VBox alignment="CENTER" prefHeight="109.0" prefWidth="352.0">
                <children>
@@ -119,7 +119,7 @@
                         <Insets bottom="10.0" />
                      </padding>
                   </Label>
-                  <ChoiceBox fx:id="releaseChoiceBox" prefHeight="27.0" prefWidth="244.0">
+                  <ChoiceBox fx:id="releaseYearChoiceBox" prefHeight="27.0" prefWidth="244.0">
                   	<items>
                   		<FXCollections fx:factory="observableArrayList">
                   			<String fx:value="pre-1980" />
@@ -131,6 +131,11 @@
                   </ChoiceBox>
                </children>
             </VBox>
+            <Label fx:id="specificationsErrorLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="16.0" prefWidth="303.0" text="" textFill="#f20b0b" wrapText="true">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
             <Button alignment="CENTER" mnemonicParsing="false" onAction="#createRecommendations" text="Find What to Watch">
                <VBox.margin>
                   <Insets bottom="20.0" top="20.0" />
@@ -138,10 +143,10 @@
             </Button>
          </children>
       </VBox>
-      <VBox alignment="CENTER" prefHeight="500.0" prefWidth="669.0">
-
+      <Line endX="100.0" fill="#212121a7" smooth="false" startX="-250.0" stroke="#0000005c" strokeLineJoin="BEVEL" />
+      <VBox alignment="CENTER" prefHeight="59.0" prefWidth="401.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Results" textAlignment="CENTER">
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Result" textAlignment="CENTER">
                <font>
                   <Font name="Avenir Oblique" size="20.0" />
                </font>
@@ -149,37 +154,39 @@
                   <Insets bottom="5.0" top="5.0" />
                </VBox.margin>
             </Label>
-            <Label fx:id="resultsLabel" prefHeight="27.0" prefWidth="259.0" textAlignment="CENTER" textFill="RED" />
-            <VBox prefHeight="110.0" prefWidth="400.0">
+            <Label fx:id="resultsLabel" alignment="CENTER" prefHeight="27.0" prefWidth="361.0" textFill="#f80101">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font></Label>
+            <Label fx:id="title" prefHeight="21.0" prefWidth="426.0" text="Title" wrapText="true">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="25.0" prefWidth="400.0">
                <children>
-                  <Label fx:id="title" prefHeight="21.0" prefWidth="627.0" text="Title">
-                     <VBox.margin>
-                        <Insets left="10.0" />
-                     </VBox.margin>
+                  <Label fx:id="year" prefHeight="16.0" prefWidth="95.0" text="Release Year" textAlignment="RIGHT">
                      <font>
-                        <Font name="Arial Bold" size="18.0" />
+                        <Font name="Arial Italic" size="13.0" />
                      </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
                   </Label>
-                  <HBox prefHeight="25.0" prefWidth="400.0">
-                     <children>
-                        <Label fx:id="year" prefHeight="16.0" prefWidth="95.0" text="Year" textAlignment="RIGHT">
-                           <font>
-                              <Font name="Arial Italic" size="13.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="service" alignment="CENTER_RIGHT" contentDisplay="BOTTOM" prefHeight="16.0" prefWidth="172.0" text="On Netflix" textAlignment="RIGHT">
-                           <font>
-                              <Font name="Arial" size="13.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets right="10.0" />
-                           </HBox.margin>
-                        </Label>
-                     </children>
-                  </HBox>
+                  <Label fx:id="service" alignment="CENTER_RIGHT" contentDisplay="BOTTOM" prefHeight="16.0" prefWidth="285.0" text="Streaming Service" textAlignment="RIGHT">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
                </children>
-            </VBox>
+            </HBox>
          </children>
       </VBox>
    </children>
-</HBox>
+</VBox>
