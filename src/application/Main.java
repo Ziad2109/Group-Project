@@ -27,3 +27,7 @@ public class Main extends Application {
 		launch(args);
 	}
 }
+// Netflix data base from https://www.kaggle.com/datasets/shivamb/netflix-shows
+// Disney data base from https://www.kaggle.com/datasets/shivamb/disney-movies-and-tv-shows
+// Prime Video data base from https://www.kaggle.com/datasets/shivamb/amazon-prime-movies-and-tv-shows
+// Hulu data base from https://www.kaggle.com/datasets/shivamb/hulu-movies-and-tv-shows
