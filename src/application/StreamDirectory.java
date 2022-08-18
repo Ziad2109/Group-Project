@@ -140,22 +140,44 @@ class Stream {
 		this.streamingService = streamingService;
 
 	}
-
+	/**
+	 * Getter for the title instance variable
+	 * @returns title
+	 */ 
 	public String getName() { 
 		return title;
 	}
 
+	/**
+	 * Setter for the title instance variable
+	 * @parameter title 
+	 */
+
 	public void setName(String title) {
 		this.title = title;
 	}
-
+	
+	/**
+	 * Getter for the type instance variable
+	 * @returns type
+	 */
 	public String getType() {
 		return type;
 	}
 	
+	/**
+	 * Setter for the type instance variable
+	 * @parameter type 
+	 */
+	
 	public void setType(String type) {
 		this.type = type;
 	}
+	
+	/**
+	 * Getter for the year instance variable
+	 * @returns year
+	 */
 
 	public String getYear() { 
 		return year;
@@ -164,26 +186,56 @@ class Stream {
 	public void setYear(String year) {
 		this.year = year;
 	}
+	
+	/**
+	 * Getter for the rating instance variable
+	 * @returns rating
+	 */
 
 	public String getRating() {
 		return rating;
 	}
+	
+	/**
+	 * Setter for the rating instance variable
+	 * @parameter rating 
+	 */
 
 	public void setRating(String rating) {
 		this.rating = rating;
 	}
+	
+	/**
+	 * Getter for the genre instance variable
+	 * @returns genre
+	 */
 
 	public String getCategory() {
 		return genre;
 	}
+	
+	/**
+	 * Setter for the genre instance variable
+	 * @parameter genre 
+	 */
 
 	public void setCategory(String genre) {
 		this.genre = genre;
 	}
+	
+	/**
+	 * Getter for the streaming service instance variable
+	 * @returns streaming service
+	 */
 
 	public String getStreamingService() {
 		return streamingService;
 	}
+		
+	/**
+	 * Setter for the streamingService instance variable
+	 * @parameter streamingService 
+	 */
 
 	public void setStreamingService(String streamingService) {
 		this.streamingService = streamingService;
